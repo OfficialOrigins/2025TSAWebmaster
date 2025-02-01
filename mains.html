@@ -1,0 +1,1620 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>Verdura | Main/Entrees</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+  <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="css/bootsnav.css">
+  <link rel="stylesheet" type="text/css" href="css/settings.css">
+  <link rel="stylesheet" type="text/css" href="css/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet"> -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <link rel="shortcut icon" href="images/titlelogo.png">
+</head>
+
+<body>
+  <!--HEADER-->
+  <style>
+    /* Navigation specific styles */
+    /* Navigation specific styles */
+.modern-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: #286B4C;
+    min-height: 90px;
+}
+
+.modern-logo {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    padding-bottom: 35px;
+}
+
+.modern-logo img {
+    height: 100px;
+    width: auto;
+}
+
+.left-nav, .right-nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.left-nav {
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.right-nav {
+    justify-content: flex-start;
+    padding-left: 100px;
+}
+
+.modern-nav__links {
+    display: flex;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.modern-nav__links a {
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 90px;
+    display: block;
+}
+
+.modern-nav__links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown Menu */
+.modern-nav__links li {
+    position: relative;
+}
+
+.modern-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 12px 0;
+    z-index: 1000;
+    
+    /* Animation properties */
+    transform-origin: top center;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modern-nav__links li:hover .modern-dropdown-content {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.modern-dropdown-content a {
+    font-family: 'Oswald', sans-serif !important;
+    color: #286B4C !important;
+    padding: 12px 25px;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    line-height: normal !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modern-dropdown-content a:hover {
+    background: #286B4C;
+    color: white !important;
+}
+
+/* Triangle indicator */
+.modern-dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 30px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+/* Mobile Menu Styles */
+#mobile__menu {
+    display: none;
+}
+
+/* Mobile Overlay */
+.modern-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #286B4C;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.modern-overlay__content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.modern-overlay__content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+
+.modern-overlay__content a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.modern-overlay .modern-close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+    .left-nav, .right-nav {
+        display: none;
+    }
+    
+    .modern-header {
+        justify-content: center;
+        padding: 0 2rem;
+    }
+    
+    .modern-logo img {
+        height: 70px;
+    }
+
+    #mobile__menu {
+        display: block;
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+/* Update the flair tag styling */
+.flair-tag {
+    display: none;  /* This will hide any flair tags */
+}
+
+/* Update card position */
+.card {
+    position: relative;
+    margin-top: 20px;  /* Space for the flair tag */
+    z-index: 1;
+    background: white;
+    border-radius: 20px;
+    overflow: visible;  /* Changed from hidden to show flair tag */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    padding: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    padding: 0 10px 20px 10px;
+    background: white;
+}
+
+.card-content h2 {
+    color: #286B4C;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.card-content .description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-content .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* .card-content .price {
+    color: #286B4C;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+    margin: 15px 0;
+} */
+
+/* Modal Updates */
+.job-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.job-modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.job-modal.show .modal-content {
+    transform: translateY(0);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(40, 107, 76, 0.2);
+}
+
+.allergy-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #286B4C;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.allergy-close:hover {
+  color: white;
+  background: #286B4C;
+}
+
+.allergy-info-btn {
+  width: 100%;
+  background: #286B4C;
+  border: 2px solid #286B4C;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.allergy-info-btn:hover {
+  background: white;
+  color: #286B4C;
+}
+
+.allergy-content {
+  display: none;
+}
+
+.allergy-section {
+  margin-bottom: 20px;
+}
+
+.allergy-section h3 {
+  color: #286B4C;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.allergy-warning {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff3cd;
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+}
+
+.allergy-warning p {
+  color: #856404;
+  margin: 0;
+  font-size: 14px;
+}
+
+#modalTitle {
+  color: #286B4C;
+  margin-bottom: 25px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.spice-level {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.spice-level i {
+  color: #ddd;
+  font-size: 18px;
+}
+
+.spice-level i.active {
+  color: #e74c3c;
+}
+
+.spice-text {
+  margin-left: 10px;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Add Font Awesome pepper icon */
+.fa-pepper-hot:before {
+  content: "\f816";  /* This is the pepper icon code */
+}
+
+.reserve-button-container {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.reserve-table-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    background-color: #286B4C;
+    border: 2px solid #286B4C;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.reserve-table-btn:hover {
+    background-color: transparent;
+    color: #286B4C;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 107, 76, 0.2);
+}
+  </style>
+</head>
+
+<body>
+  <!-- Add this right after the opening <body> tag -->
+  <button class="mobile-menu-btn" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Modern Header -->
+  <header class="modern-header">
+    <!-- Left Navigation -->
+    <nav class="left-nav">
+        <ul class="modern-nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="benefits.html">About</a></li>
+            <li>
+                <a href="#">Menu</a>
+                <div class="modern-dropdown-content">
+                    <a href="appetizers.html">Appetizers</a>
+                    <a href="mains.html">Main/Entrees</a>
+                    <a href="desserts.html">Desserts</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Center Logo -->
+    <a class="modern-logo" href="index.html">
+        <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+    </a>
+
+    <!-- Right Navigation -->
+    <nav class="right-nav">
+        <ul class="modern-nav__links">
+            <li>
+                <a href="community.html">Community</a>
+            </li>
+            <li>
+                <a href="#">Reserve</a>
+                <div class="modern-dropdown-content">
+                    <a href="reserve.html">Dine In</a>
+                    <a href="CarryOut.html">Order To-Go</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Add this right after the header -->
+  <div id="mobileNav" class="mobile-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+    <div class="mobile-nav-content">
+      <a href="index.html">Home</a>
+      <a href="benefits.html">About</a>
+      <a href="appetizers.html">Appetizers</a>
+      <a href="mains.html">Main/Entrees</a>
+      <a href="desserts.html">Desserts</a>
+      <a href="outreach.html">Community Outreach</a>
+      <a href="reserve.html">Reserve</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!--Image Header-->
+  <section class="page_header padding jobs_header">
+    <div class="container">
+      <div class="header_content text-center">
+        <h1 style="color:white" class="uppercase">Mains/Entrees</h1>
+      </div>
+    </div>
+  </section>
+
+  <!--Breadcrumb-->
+  <section class="page_menu">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li class="active">Jobs</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--Jobs Section-->
+  <section id="availability" class="padding">
+    <div class="container">
+      <div class="text-right">
+        <h5 class="result uppercase">Showing 1-9 of 9 results</h5>
+      </div>
+  
+      <!-- First Row of Cards -->
+      <div class="row">
+        <!-- Buddha Bowl (remove flair) -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/MexPoke.png" alt="Buddha Bowl">
+            <div class="card-content">
+              <h2>Buddha Bowl</h2>
+              <p class="description">Ancient grains, roasted vegetables, avocado, and medicinal mushrooms, topped with our signature tahini dressing.</p>
+              <div class="details">
+                <span class="dietary-info">Vegan • Gluten-Free</span>
+                <span class="portion">Large Bowl</span>
+              </div>
+              <div class="price">$16.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('buddhabowl')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ancient Grains Bowl (add flair) -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/BowMain.png" alt="Ancient Grains Bowl">
+            <div class="card-content">
+              <h2>Ancient Grains Bowl</h2>
+              <p class="description">A nourishing blend of farro, quinoa, and wild rice topped with roasted root vegetables, crispy chickpeas, and miso-tahini sauce.</p>
+              <div class="details">
+                <span class="dietary-info">Vegan • High Protein</span>
+                <span class="portion">Full Bowl</span>
+              </div>
+              <div class="price">$18.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('ancientgrains')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tuscan Bean Chili -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/Chili.png" alt="Tuscan Bean Chili">
+            <div class="card-content">
+              <h2>Tuscan Bean Chili</h2>
+              <p class="description">Hearty blend of chickpeas, lentils, and fire-roasted tomatoes with Tuscan herbs and warm spices, served with herb-infused couscous.</p>
+              <div class="details">
+                <span class="dietary-info">Vegan • High Protein</span>
+                <span class="portion">Large Bowl</span>
+              </div>
+              <div class="price">$17.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('tuscanbean')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row of Cards -->
+      <div class="row">
+        <!-- Nourish Bowl (add flair) -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/QGrainsBowlQinoa.png" alt="Nourish Bowl">
+            <div class="card-content">
+              <h2>Nourish Bowl</h2>
+              <p class="description">Quinoa, steamed greens, roasted sweet potato, fermented vegetables, and our signature miso-ginger sauce.</p>
+              <div class="details">
+                <span class="dietary-info">Vegan • Probiotic-Rich</span>
+                <span class="portion">Large Bowl</span>
+              </div>
+              <div class="price">$16.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('nourishbowl')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Provençal Ratatouille -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/Ratatouille.png" alt="Provençal Ratatouille">
+            <div class="card-content">
+              <h2>Provençal Ratatouille</h2>
+              <p class="description">Classic Provençal stewed vegetables with eggplant, zucchini, tomatoes, and herbs de Provence, served with crusty herb-infused bread.</p>
+              <div class="details">
+                <span class="dietary-info">Vegan • French-Med</span>
+                <span class="portion">Large Bowl</span>
+              </div>
+              <div class="price">$20.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('ratatouille')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teriyaki Tempeh Bowl -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/TeriykaiVegpork.png" alt="Plant-Based Teriyaki Bowl">
+            <div class="card-content">
+              <h2>Plant-Based Teriyaki Bowl</h2>
+              <p class="description">Grilled plant-based pork alternative in sweet teriyaki glaze with stir-fried vegetables and brown rice, topped with sesame seeds and green onions.</p>
+              <div class="details">
+                <span class="dietary-info">Vegan • High Protein</span>
+                <span class="portion">Large Bowl</span>
+              </div>
+              <div class="price">$18.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('teriyaki')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Row of Cards -->
+      <div class="row">
+          <!-- Spiced Lentil Daal -->
+        <div class="col-sm-4">
+          <div class="card">
+                  <img src="images/food/Daa; tadka.png" alt="Spiced Lentil Daal">
+            <div class="card-content">
+                      <h2>Spiced Lentil Daal</h2>
+                      <p class="description">Red lentils simmered with aromatic herbs, roasted garlic, and sun-dried tomatoes, served with za'atar flatbread and fresh herbs.</p>
+              <div class="details">
+                          <span class="dietary-info">Vegan • High Protein</span>
+                          <span class="portion">Large Bowl</span>
+              </div>
+                      <div class="price">$17.99</div>
+                      <button class="allergy-info-btn" onclick="openAllergyModal('spicedlentil')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+
+          <!-- Masala Lentil Bowl -->
+        <div class="col-sm-4">
+          <div class="card">
+                  <img src="images/food/MexPoke (1).png" alt="Masala Lentil Bowl">
+            <div class="card-content">
+                      <h2>Masala Lentil Bowl</h2>
+                      <p class="description">Black lentils simmered with aromatic spices, served with roasted vegetables, fresh herbs, and a side of cumin-scented rice.</p>
+              <div class="details">
+                          <span class="dietary-info">Vegan • High Protein</span>
+                          <span class="portion">Large Bowl</span>
+              </div>
+                      <div class="price">$17.99</div>
+                      <button class="allergy-info-btn" onclick="openAllergyModal('masalalentil')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+
+          <!-- Golden Falafel Bowl -->
+        <div class="col-sm-4">
+          <div class="card">
+                  <img src="images/food/falafel bowl.png" alt="Golden Falafel Bowl">
+            <div class="card-content">
+                      <h2>Golden Falafel Bowl</h2>
+                      <p class="description">Crispy herb-spiced falafel served over quinoa with roasted vegetables, hummus, fresh herbs, and tahini drizzle, garnished with pickled onions.</p>
+              <div class="details">
+                          <span class="dietary-info">Vegan • High Protein</span>
+                          <span class="portion">Large Bowl</span>
+              </div>
+                      <div class="price">$18.99</div>
+                      <button class="allergy-info-btn" onclick="openAllergyModal('goldenfalafel')">Dietary & Allergy Information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--How to Apply Button-->
+  <div class="reserve-button-container">
+    <a href="reserve.html" class="reserve-table-btn">RESERVE A TABLE</a>
+  </div>
+  <br>
+  <br>
+
+  <!--Footer-->
+  <footer class="padding_top bottom_half">
+    <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-home"></i>10891 Cory Lake Drive,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(205)-492-0466</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
+            <ul class="about_foot">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+    
+
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+  <script src="js/jquery-2.2.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/functions.js"></script>
+
+
+  <div id="jobModal" class="job-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body">
+            <!-- Spring Rolls Content -->
+            <div id="springrolls-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Rice paper wraps filled with fresh carrots, cucumber, purple cabbage, mint, cilantro, and our signature VitaBlend™ herbs including holy basil and lemongrass.</p>
+                
+                <h3>VitaBlend™ Dipping Sauce</h3>
+                <p>House-made sauce featuring tamari, ginger, garlic, and medicinal mushroom extract.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> None of the major allergens</p>
+                    <p><strong>May contain traces of:</strong> Soy (in dipping sauce)</p>
+                    <p><strong>Kitchen Notice:</strong> Prepared in a facility that also processes nuts, wheat, and soy</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Medium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hummus Platter Content -->
+            <div id="hummus-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Organic chickpeas, tahini, olive oil, lemon, garlic, and our therapeutic herb blend featuring turmeric, oregano, and thyme.</p>
+                
+                <h3>Served With</h3>
+                <p>Warm gluten-free pita bread, organic carrots, cucumber, bell peppers, and cherry tomatoes.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Sesame (tahini)</p>
+                    <p><strong>May contain traces of:</strong> Gluten, nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Gluten-free pita available upon request</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Mild</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wellness Bites Content -->
+            <div id="wellnessbites-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Medjool dates, almonds, walnuts, chia seeds, cacao, coconut, and our adaptogenic herb blend featuring ashwagandha and rhodiola.</p>
+                
+                <h3>Nutritional Benefits</h3>
+                <p>Rich in healthy fats, fiber, and plant-based protein. Enhanced with stress-reducing adaptogens.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Tree nuts (almonds, walnuts), Coconut</p>
+                    <p><strong>May contain traces of:</strong> Other tree nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Not suitable for nut allergies</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Not Spicy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Garden Soup Content -->
+            <div id="gardensoup-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Seasonal organic vegetables, medicinal mushrooms (reishi, shiitake), healing herbs (thyme, rosemary, sage), vegetable broth, and our immune-boosting spice blend.</p>
+                
+                <h3>Served With</h3>
+                <p>Fresh-baked gluten-free herb bread and microgreens garnish.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Celery</p>
+                    <p><strong>May contain traces of:</strong> Gluten (in bread)</p>
+                    <p><strong>Kitchen Notice:</strong> All vegetables are organic and locally sourced when possible</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Mild</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vitality Salad Content -->
+            <div id="vitalitysalad-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Mixed organic greens, spinach, kale, sprouted seeds (sunflower, pumpkin), goji berries, and our signature herb blend featuring nettle and dandelion leaf.</p>
+                
+                <h3>Citrus Dressing</h3>
+                <p>Cold-pressed olive oil, fresh citrus juice blend, local honey, and adaptogenic mushroom powder.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Seeds</p>
+                    <p><strong>May contain traces of:</strong> Tree nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Honey can be substituted with agave for vegan option</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Not Spicy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Herbal Bruschetta Content -->
+            <div id="bruschetta-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Artisan sourdough bread, heirloom tomatoes, fresh basil, oregano, garlic, and our house-made herb-infused olive oil.</p>
+                
+                <h3>Garnish</h3>
+                <p>Medicinal microgreens blend and aged balsamic reduction.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Wheat, Gluten</p>
+                    <p><strong>May contain traces of:</strong> Seeds</p>
+                    <p><strong>Kitchen Notice:</strong> Gluten-free bread option available upon request</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Mild</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quinoa Bites Content -->
+            <div id="quinoabites-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Organic quinoa, turmeric, black pepper, healing herbs (sage, thyme), and our proprietary spice blend.</p>
+                
+                <h3>Mint-Yogurt Dip</h3>
+                <p>Greek yogurt, fresh mint, lemon, garlic, and our digestive herb blend.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Dairy (in dip)</p>
+                    <p><strong>May contain traces of:</strong> Nuts, Seeds</p>
+                    <p><strong>Kitchen Notice:</strong> Vegan yogurt alternative available</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot active"></i>
+                        <span class="spice-text">Hot</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stuffed Mushrooms Content -->
+            <div id="mushrooms-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Portobello mushrooms, quinoa, medicinal herbs, garlic, onions, and our immune-supporting mushroom blend (chaga, cordyceps).</p>
+                
+                <h3>Garnish</h3>
+                <p>Fresh herbs, microgreens, and truffle-infused olive oil drizzle.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> None of the major allergens</p>
+                    <p><strong>May contain traces of:</strong> Tree nuts, Seeds</p>
+                    <p><strong>Kitchen Notice:</strong> All mushrooms are organically grown</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot active"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Medium</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avocado Toast Content -->
+            <div id="avocadotoast-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Organic sourdough bread, ripe avocados, our signature seed blend (hemp, chia, flax), microgreens, and cold-pressed olive oil.</p>
+                
+                <h3>Verdura Seasoning</h3>
+                <p>Pink Himalayan salt, black pepper, nutritional yeast, and our proprietary herb blend.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Gluten, Seeds</p>
+                    <p><strong>May contain traces of:</strong> Tree nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Gluten-free bread available, all seeds are organic</p>
+                </div>
+                <div class="allergy-section">
+                    <h3>Spice Level</h3>
+                    <div class="spice-level">
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <i class="fa fa-pepper-hot"></i>
+                        <span class="spice-text">Not Spicy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="allergyModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal allergy-close">&times;</span>
+    <h2 id="modalTitle">Dietary & Allergy Information</h2>
+    
+    <!-- Spring Rolls Info -->
+    <div id="springrolls" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Rice paper, Fresh vegetables, Herbs</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Soy (in dipping sauce)</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Gluten-Free</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Medium</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Prepared in a facility that also processes nuts, wheat, and soy</p>
+      </div>
+    </div>
+
+    <!-- Hummus Platter Info -->
+    <div id="hummus" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Chickpeas, Tahini (sesame), Olive oil, Garlic</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts, Wheat (in pita bread)</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegetarian<br>✓ High Protein</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Mild</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Gluten-free pita available upon request</p>
+      </div>
+    </div>
+
+    <!-- Wellness Bites Info -->
+    <div id="wellnessbites" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Medjool dates, almonds, walnuts, chia seeds, cacao, coconut</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts (almonds, walnuts), Coconut</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Raw<br>✓ Vegan<br>✓ Gluten-Free</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Not Spicy</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Not suitable for nut allergies</p>
+      </div>
+    </div>
+
+    <!-- Garden Soup Info -->
+    <div id="gardensoup" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Seasonal organic vegetables, medicinal mushrooms (reishi, shiitake), healing herbs (thyme, rosemary, sage)</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Celery</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegetarian<br>✓ Organic</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Mild</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>All vegetables are organic and locally sourced when possible</p>
+      </div>
+    </div>
+
+    <!-- Vitality Salad Info -->
+    <div id="vitalitysalad" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Mixed organic greens, spinach, kale, sprouted seeds (sunflower, pumpkin), goji berries</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Seeds</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Raw</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Not Spicy</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Honey can be substituted with agave for vegan option</p>
+      </div>
+    </div>
+
+    <!-- Herbal Bruschetta Info -->
+    <div id="bruschetta" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Artisan sourdough bread, heirloom tomatoes, fresh basil, oregano, garlic</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Wheat, Gluten</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegetarian<br>✓ Local</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Mild</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Gluten-free bread option available upon request</p>
+      </div>
+    </div>
+
+    <!-- Quinoa Bites Info -->
+    <div id="quinoabites" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Organic quinoa, turmeric, black pepper, healing herbs (sage, thyme)</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Nuts, Seeds</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Gluten-Free<br>✓ Protein-Rich</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot active"></i>
+          <span class="spice-text">Hot</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Prepared in a facility that also processes nuts, wheat, and soy</p>
+      </div>
+    </div>
+
+    <!-- Stuffed Mushrooms Info -->
+    <div id="mushrooms" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Portobello mushrooms, quinoa, medicinal herbs, garlic, onions</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts, Seeds</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegetarian<br>✓ Immune-Boosting</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Medium</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>All mushrooms are organically grown</p>
+      </div>
+    </div>
+
+    <!-- Avocado Toast Info -->
+    <div id="avocadotoast" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Organic sourdough bread, ripe avocados, our signature seed blend (hemp, chia, flax)</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Seeds</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Omega-Rich</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Not Spicy</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Prepared in a facility that also processes nuts, wheat, and soy</p>
+      </div>
+    </div>
+
+    <!-- Provençal Ratatouille Info -->
+    <div id="ratatouille" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Eggplant, Zucchini, Tomatoes, Bell Peppers, Fresh Herbs, Olive Oil</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Gluten (in bread)</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Mediterranean Diet<br>✓ Low Calorie</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Mild</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Gluten-free bread available upon request. All vegetables locally sourced when possible.</p>
+      </div>
+    </div>
+
+    <!-- Golden Falafel Bowl Info -->
+    <div id="goldenfalafel" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Chickpeas, Quinoa, Tahini (sesame), Mediterranean herbs, Hummus, Mixed vegetables</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts, Gluten</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ High Protein<br>✓ Mediterranean Style</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Medium</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains sesame. Made in a facility that processes nuts and wheat. Please inform server of any allergies.</p>
+      </div>
+    </div>
+
+    <!-- Teriyaki Info -->
+    <div id="teriyaki" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Plant-based meat (soy protein), Brown rice, Teriyaki sauce (soy, ginger), Sesame seeds</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Sesame, Wheat, Tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ High Protein<br>✓ Plant-Based Meat Alternative</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Medium</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains soy. Made with plant-based meat alternative. Gluten-free sauce available upon request.</p>
+      </div>
+    </div>
+
+    <!-- Masala Lentil Info -->
+    <div id="masalalentil" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Black lentils, Basmati rice, Mixed vegetables, Aromatic spices (cumin, coriander, turmeric)</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts, Mustard seeds</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ High Protein<br>✓ Gluten-Free</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Spice Level</h3>
+        <div class="spice-level">
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot active"></i>
+          <i class="fa fa-pepper-hot"></i>
+          <span class="spice-text">Medium</span>
+        </div>
+      </div>
+      <div class="allergy-warning">
+        <p>Made in a facility that processes nuts and wheat. Spice level can be adjusted upon request.</p>
+      </div>
+    </div>
+
+    <!-- Buddha Bowl Info -->
+    <div id="buddhabowl" class="allergy-content">
+        <div class="allergy-section">
+            <h3>Contains</h3>
+            <p>Mixed grains (quinoa, brown rice), Roasted vegetables, Avocado, Medicinal mushrooms (shiitake, maitake), Tahini</p>
+        </div>
+        <div class="allergy-section">
+            <h3>May Contain Traces Of</h3>
+            <p>Sesame, Tree nuts</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Dietary Notes</h3>
+            <p>✓ Vegan<br>✓ Gluten-Free<br>✓ High Fiber</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Spice Level</h3>
+            <div class="spice-level">
+                <i class="fa fa-pepper-hot active"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <span class="spice-text">Mild</span>
+            </div>
+        </div>
+        <div class="allergy-warning">
+            <p>Contains sesame in tahini dressing. Please inform server of any allergies.</p>
+        </div>
+    </div>
+
+    <!-- Ancient Grains Bowl Info -->
+    <div id="ancientgrains" class="allergy-content">
+        <div class="allergy-section">
+            <h3>Contains</h3>
+            <p>Farro (wheat), Quinoa, Wild rice, Roasted root vegetables, Chickpeas, Miso, Tahini</p>
+        </div>
+        <div class="allergy-section">
+            <h3>May Contain Traces Of</h3>
+            <p>Sesame, Soy, Tree nuts</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Dietary Notes</h3>
+            <p>✓ Vegan<br>✓ High Protein<br>✓ High Fiber</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Spice Level</h3>
+            <div class="spice-level">
+                <i class="fa fa-pepper-hot active"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <span class="spice-text">Mild</span>
+            </div>
+        </div>
+        <div class="allergy-warning">
+            <p>Contains wheat (farro) and soy (miso). Please inform server of any allergies.</p>
+        </div>
+    </div>
+
+    <!-- Tuscan Bean Chili Info -->
+    <div id="tuscanbean" class="allergy-content">
+        <div class="allergy-section">
+            <h3>Contains</h3>
+            <p>Chickpeas, Lentils, Fire-roasted tomatoes, Tuscan herbs, Couscous (wheat)</p>
+        </div>
+        <div class="allergy-section">
+            <h3>May Contain Traces Of</h3>
+            <p>Tree nuts, Celery</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Dietary Notes</h3>
+            <p>✓ Vegan<br>✓ High Protein<br>✓ High Fiber</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Spice Level</h3>
+            <div class="spice-level">
+                <i class="fa fa-pepper-hot active"></i>
+                <i class="fa fa-pepper-hot active"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <span class="spice-text">Medium</span>
+            </div>
+        </div>
+        <div class="allergy-warning">
+            <p>Contains wheat in couscous. Gluten-free option available with quinoa. Please inform server of any allergies.</p>
+        </div>
+    </div>
+
+    <!-- Nourish Bowl Info -->
+    <div id="nourishbowl" class="allergy-content">
+        <div class="allergy-section">
+            <h3>Contains</h3>
+            <p>Quinoa, Steamed greens, Sweet potato, Fermented vegetables, Miso, Ginger</p>
+        </div>
+        <div class="allergy-section">
+            <h3>May Contain Traces Of</h3>
+            <p>Soy, Sesame</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Dietary Notes</h3>
+            <p>✓ Vegan<br>✓ Gluten-Free<br>✓ Probiotic-Rich</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Spice Level</h3>
+            <div class="spice-level">
+                <i class="fa fa-pepper-hot active"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <span class="spice-text">Mild</span>
+            </div>
+        </div>
+        <div class="allergy-warning">
+            <p>Contains soy in miso sauce. Please inform server of any allergies.</p>
+        </div>
+    </div>
+
+    <!-- Spiced Lentil Daal Info -->
+    <div id="spicedlentil" class="allergy-content">
+        <div class="allergy-section">
+            <h3>Contains</h3>
+            <p>Red lentils, Aromatic spices, Roasted garlic, Sun-dried tomatoes, Za'atar (sesame, herbs)</p>
+        </div>
+        <div class="allergy-section">
+            <h3>May Contain Traces Of</h3>
+            <p>Wheat, Tree nuts</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Dietary Notes</h3>
+            <p>✓ Vegan<br>✓ High Protein<br>✓ Iron-Rich</p>
+        </div>
+        <div class="allergy-section">
+            <h3>Spice Level</h3>
+            <div class="spice-level">
+                <i class="fa fa-pepper-hot active"></i>
+                <i class="fa fa-pepper-hot active"></i>
+                <i class="fa fa-pepper-hot"></i>
+                <span class="spice-text">Medium</span>
+            </div>
+        </div>
+        <div class="allergy-warning">
+            <p>Contains sesame in za'atar. Gluten-free flatbread available upon request. Please inform server of any allergies.</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+    const modal = document.getElementById('jobModal');
+
+    viewDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.card');
+            const title = card.querySelector('h2').textContent;
+            const contentId = title.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '') + '-content';
+            
+            const contentDiv = document.getElementById(contentId);
+            if (contentDiv) {
+                document.getElementById('modalTitle').textContent = title;
+                document.querySelectorAll('.menu-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                contentDiv.style.display = 'block';
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('show'), 10);
+            }
+        });
+    });
+});
+</script>
+
+<script>
+// Modal functionality
+const modal = document.getElementById('allergyModal');
+const closeBtn = document.querySelector('.allergy-close');
+const allergyContents = document.getElementsByClassName('allergy-content');
+
+function openAllergyModal(itemId) {
+  modal.style.display = 'block';
+  // Hide all allergy content divs
+  for(let content of allergyContents) {
+    content.style.display = 'none';
+  }
+  // Show the selected item's allergy content
+  document.getElementById(itemId).style.display = 'block';
+}
+
+// Close modal when clicking the X button
+closeBtn.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+});
+</script>
+
+</body>
+
+</html>

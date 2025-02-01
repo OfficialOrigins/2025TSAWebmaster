@@ -1,0 +1,886 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>Verdura | Community</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+  <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="css/bootsnav.css">
+  <link rel="stylesheet" type="text/css" href="css/settings.css">
+  <link rel="stylesheet" type="text/css" href="css/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link rel="shortcut icon" href="images/titlelogo.png">
+
+
+ 
+
+</head>
+
+<body>
+
+ 
+
+  <!--HEADER-->
+     <!--HEADER-->
+     
+
+
+  <!--Image Header-->
+  <section class="page_header padding howtoapply_header">
+    <div class="container">
+      <div class="header_content padding">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 style="color: white;" class="uppercase">Coummnity</h1>
+          </div>
+        </div>
+      </div> 
+      
+      <style>
+
+    
+
+        .modern-header {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 0 5rem;
+         background-color: #286B4C;
+         min-height: 90px;
+     }
+     
+     .modern-logo {
+         display: flex;
+         align-items: center;
+         padding: 8px 0;
+         padding-bottom: 35px;
+     }
+     
+     .modern-logo img {
+         height: 100px;
+         width: auto;
+     }
+     
+     .left-nav, .right-nav {
+         flex: 1;
+         display: flex;
+         align-items: center;
+     }
+     
+     .left-nav {
+         justify-content: flex-end;
+         padding-right: 100px;
+     }
+     
+     .right-nav {
+         justify-content: flex-start;
+         padding-left: 100px;
+     }
+     
+     .modern-nav__links {
+         display: flex;
+         gap: 4rem;
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         align-items: center;
+     }
+     
+     .modern-nav__links a {
+         font-family: 'Oswald', sans-serif !important;
+         font-size: 18px;
+         font-weight: 500;
+         color: white;
+         text-decoration: none;
+         transition: color 0.3s ease;
+         line-height: 90px;
+         display: block;
+     }
+     
+     .modern-nav__links a:hover {
+         color: rgba(255, 255, 255, 0.8);
+     }
+     
+     /* Dropdown Menu */
+     .modern-nav__links li {
+         position: relative;
+     }
+     
+     .modern-dropdown-content {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         background: white;
+         min-width: 220px;
+         border-radius: 8px;
+         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+         padding: 12px 0;
+         z-index: 1000;
+         
+         /* Animation properties */
+         transform-origin: top center;
+         transform: scaleY(0);
+         opacity: 0;
+         transition: transform 0.2s ease, opacity 0.2s ease;
+     }
+     
+     .modern-nav__links li:hover .modern-dropdown-content {
+         transform: scaleY(1);
+         opacity: 1;
+     }
+     
+     .modern-dropdown-content a {
+         font-family: 'Oswald', sans-serif !important;
+         color: #286B4C !important;
+         padding: 12px 25px;
+         display: block;
+         font-size: 16px;
+         text-align: left;
+         line-height: normal !important;
+         transition: background-color 0.2s ease, color 0.2s ease;
+     }
+     
+     .modern-dropdown-content a:hover {
+         background: #286B4C;
+         color: white !important;
+     }
+     
+     /* Triangle indicator */
+     .modern-dropdown-content::before {
+         content: '';
+         position: absolute;
+         top: -8px;
+         left: 30px;
+         border-left: 8px solid transparent;
+         border-right: 8px solid transparent;
+         border-bottom: 8px solid white;
+     }
+     
+     /* Mobile Menu Styles */
+     #mobile__menu {
+         display: none;
+     }
+     
+     /* Mobile Overlay */
+     .modern-overlay {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         z-index: 1001;
+         top: 0;
+         left: 0;
+         background-color: #286B4C;
+         overflow-x: hidden;
+         transition: 0.5s;
+     }
+     
+     .modern-overlay__content {
+         position: relative;
+         top: 25%;
+         width: 100%;
+         text-align: center;
+         margin-top: 30px;
+     }
+     
+     .modern-overlay__content a {
+         padding: 8px;
+         text-decoration: none;
+         font-size: 24px;
+         color: white;
+         display: block;
+         transition: 0.3s;
+         margin: 10px 0;
+     }
+     
+     .modern-overlay__content a:hover {
+         color: rgba(255, 255, 255, 0.8);
+     }
+     
+     .modern-overlay .modern-close {
+         position: absolute;
+         top: 20px;
+         right: 45px;
+         font-size: 60px;
+         color: white;
+         cursor: pointer;
+     }
+     
+     /* Responsive Design */
+     @media screen and (max-width: 800px) {
+         .left-nav, .right-nav {
+             display: none;
+         }
+         
+         .modern-header {
+             justify-content: center;
+             padding: 0 2rem;
+         }
+         
+         .modern-logo img {
+             height: 70px;
+         }
+     
+         #mobile__menu {
+             display: block;
+         }
+     }
+     
+     /* Mobile Menu Button */
+     .mobile-menu-btn {
+         display: none;
+         position: fixed;
+         top: 20px;
+         right: 20px;
+         z-index: 1002;
+         background: none;
+         border: none;
+         color: white;
+         font-size: 24px;
+         cursor: pointer;
+     }
+     
+     @media screen and (max-width: 800px) {
+         .mobile-menu-btn {
+             display: block;
+         }
+     }
+       </style>
+     </head>
+     
+     <body>
+       <!-- Add this right after the opening <body> tag -->
+       <button class="mobile-menu-btn" onclick="openNav()">
+         <i class="fa fa-bars"></i>
+       </button>
+     
+       <!-- Modern Header -->
+       <header class="modern-header">
+         <!-- Left Navigation -->
+         <nav class="left-nav">
+             <ul class="modern-nav__links">
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="benefits.html">About</a></li>
+                 <li>
+                     <a href="#">Menu</a>
+                     <div class="modern-dropdown-content">
+                         <a href="appetizers.html">Appetizers</a>
+                         <a href="mains.html">Main/Entrees</a>
+                         <a href="desserts.html">Desserts</a>
+                     </div>
+                 </li>
+             </ul>
+         </nav>
+     
+         <!-- Center Logo -->
+         <a class="modern-logo" href="index.html">
+             <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+         </a>
+     
+         <!-- Right Navigation -->
+         <nav class="right-nav">
+             <ul class="modern-nav__links">
+                 <li>
+                     <a href="community.html">Community</a>
+                 </li>
+                 <li>
+                     <a href="#">Reserve</a>
+                     <div class="modern-dropdown-content">
+                         <a href="reserve.html">Dine In</a>
+                         <a href="CarryOut.html">Order To-Go</a>
+                     </div>
+                 </li>
+                 <li><a href="contact.html">Contact</a></li>
+             </ul>
+         </nav>
+       </header>
+    
+    </div>
+  </section>
+
+  
+
+<!-- <script>
+  function toggleAnswer(answerId) {
+    var answer = document.getElementById(answerId);
+    if (answer.style.display === 'none' || answer.style.display === '') {
+      answer.style.display = 'block';
+    } else {
+      answer.style.display = 'none';
+    }
+  }
+</script>
+</section>
+ -->
+
+
+
+ 
+ <section class="purpose-section">
+    <div class="container">
+        <h2>Our Purpose</h2>
+        <p>At Verdura, we are dedicated to minimizing our environmental impact and advancing sustainability in every area of our operations. The following actions will be taken by us in the following year to aid in achieving our goal.</p>
+    </div>
+</section>
+
+<style>
+/* Add this to your existing styles */
+.purpose-section {
+    padding: 80px 0;
+    margin-bottom: 40px;
+    background-color: rgb(241, 229, 208);
+    text-align: center;
+}
+
+.purpose-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.purpose-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px;
+    color: #286B4C;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.purpose-section p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    color: #4A7862;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .purpose-section {
+        padding: 60px 0;
+    }
+    
+    .purpose-section h2 {
+        font-size: 48px;
+    }
+    
+    .purpose-section p {
+        font-size: 18px;
+    }
+}
+</style>
+
+ <section class="parallax-section">
+     <div class="parallax-bg forest"></div>
+     <div class="content-container">
+         <div class="shaded-content">
+             <h2>Our Goals</h2>
+             <p>At Verdura, we believe in sustainable practices that protect our environment. Through innovative farming techniques and responsible sourcing, we're working to create a greener future for all.</p>
+             <!-- <div class="initiative-tags">
+                 <span class="tag">Agroecology</span>
+                 <span class="tag">Worker Justice</span>
+                 <span class="tag">Food Sovereignty</span>
+                 <span class="tag">Health & Environmental Justice</span>
+                 <span class="tag">Climate Justice</span>
+             </div> -->
+             <p class="partnership-text">For every dish served at Verdura, we donate a portion of the revenue to support FWAF's initiatives.</p>
+             <div class="button-group">
+                 <a href="https://floridafarmworkers.org/" target="_blank" class="btn-standard">LEARN MORE ABOUT FWAF</a>
+             </div>
+         </div>
+     </div>
+ </section>
+ 
+ <!-- Add this between the two parallax sections -->
+ <section class="quote-section">
+    <div class="container">
+        <div class="quote-box">
+            <i class="fa fa-quote-left quote-icon"></i>
+            <blockquote>
+                "Every meal served is a step towards a more sustainable and equitable community."
+            </blockquote>
+            <p class="quote-author">- Verdura Team</p>
+        </div>
+    </div>
+</section>
+
+<!-- Second Parallax Section -->
+<section class="parallax-section">
+    <div class="parallax-bg ocean"></div>
+    <div class="content-container right">
+        <div class="shaded-content">
+            <h2>Nourishing Communities</h2>
+            <p>We just don't focus on sustainability, we focus on our beloved community. Through our zero-waste initiative, we partner with Feeding Tampa Bay to ensure surplus food reaches those in need, making every meal count twice.</p>
+            <!-- <div class="initiative-tags">
+                <span class="tag">Zero Waste</span>
+                <span class="tag">Food Security</span>
+                <span class="tag">Community Support</span>
+                <span class="tag">Local Impact</span>
+            </div> -->
+            <p class="partnership-text">All surplus food from Verdura is carefully packaged and donated to support local families through Feeding Tampa Bay.</p>
+            <div class="button-group">
+                <a href="https://feedingtampabay.org/" target="_blank" class="btn-standard">LEARN MORE ABOUT FEEDING TAMPA BAY</a>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<style>
+/* Parallax Sections */
+.parallax-section {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0; /* Remove margin */
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax-bg.forest {
+    background-image: url('images/AdobeStock_530598240.jpeg');
+    /* Fallback color in case image doesn't load */
+    background-color: #286B4C;
+}
+
+.parallax-bg.ocean {
+    background-image: url('images/AdobeStock_624898750.jpeg');
+    /* Fallback color in case image doesn't load */
+    background-color: #4A7862;
+}
+
+/* Content Containers */
+.content-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.content-container.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.shaded-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 15px;
+    max-width: 550px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin: 40px 0;
+}
+
+/* Typography */
+.shaded-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    color: #286B4C;
+    margin-bottom: 20px;
+}
+
+.shaded-content p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4A7862;
+    margin-bottom: 30px;
+}
+
+/* Updated Button Styles */
+.btn-standard {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #286B4C;
+    color: white;
+    border: 2px solid #286B4C;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-standard:hover {
+    background-color: #1d5038;
+    border-color: #1d5038;
+    color: white;
+}
+
+.btn-standard.light {
+    background-color: transparent;
+    color: #286B4C;
+}
+
+.btn-standard.light:hover {
+    background-color: #286B4C;
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .parallax-section {
+        height: auto;
+        min-height: 60vh;
+        padding: 80px 0;
+        margin: 20px 0;
+    }
+
+    .parallax-bg {
+        background-attachment: scroll;
+    }
+
+    .content-container.right {
+        justify-content: center;
+    }
+
+    .shaded-content {
+        padding: 30px;
+        margin: 20px 0;
+    }
+
+    .shaded-content h2 {
+        font-size: 36px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-standard {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .content-container {
+        padding: 0 20px;
+    }
+}
+
+/* Update Parallax Section spacing */
+.parallax-section:last-of-type {
+    margin-bottom: 0; /* Remove bottom margin on last parallax */
+}
+
+/* Quote Section */
+.quote-section {
+    padding: 60px 0;
+    background-color: rgb(241, 229, 208);
+}
+
+.quote-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+    color: #286B4C;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.quote-box blockquote {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #4A7862;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.quote-author {
+    font-family: 'Oswald', sans-serif;
+    color: #286B4C;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .quote-section {
+        padding: 40px 20px;
+    }
+    
+    .quote-box {
+        padding: 30px;
+    }
+    
+    .quote-box blockquote {
+        font-size: 20px;
+    }
+}
+</style>
+
+<style>
+/* Updated Dropdown Styles */
+.dropdown-menu {
+    background-color: white;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0;
+    min-width: 180px;
+    margin-top: 0;
+}
+
+.dropdown-menu > li > a {
+    color: #286B4C !important;
+    padding: 15px 20px !important;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(40, 107, 76, 0.1);
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu > li:last-child > a {
+    border-bottom: none;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #286B4C !important;
+    color: white !important;
+}
+
+/* Mobile Responsive Dropdown */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        background-color: rgba(255,255,255,0.95);
+    }
+
+    .dropdown-menu > li > a {
+        padding: 12px 20px !important;
+        color: #286B4C !important;
+    }
+
+    .dropdown-menu > li > a:hover {
+        background-color: #286B4C !important;
+        color: white !important;
+    }
+}
+
+/* Navbar link hover effect */
+.nav-link:hover {
+    color: rgba(255,255,255,0.8) !important;
+}
+
+/* Dropdown arrow */
+.dropdown-toggle .caret {
+    margin-left: 5px;
+}
+</style>
+
+<!-- <div class="partnership-box">
+    <h2>Community Support</h2>
+    <p class="partnership-text">For every dish served at Verdura, we donate a portion of the revenue to support FWAF's initiatives in:</p>
+    
+    <div class="initiative-tags">
+        <span class="tag">Agroecology</span>
+        <span class="tag">Worker Justice</span>
+        <span class="tag">Food Sovereignty</span>
+        <span class="tag">Health & Environmental Justice</span>
+        <span class="tag">Climate Justice</span>
+    </div>
+
+    <p class="partnership-footer">Together, we're working to create a more equitable and sustainable food system in Florida.</p>
+    
+    <a href="https://floridafarmworkers.org/" target="_blank" class="btn-learn">LEARN MORE ABOUT FWAF</a>
+</div> -->
+
+<style>
+.partnership-box {
+    background: rgb(241, 229, 208);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.partnership-box h2 {
+    color: #286B4C;
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.partnership-text {
+    color: #286B4C;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.initiative-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.tag {
+    background: #286B4C;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.partnership-footer {
+    color: #286B4C;
+    font-style: italic;
+    margin: 25px 0;
+}
+
+.btn-learn {
+    display: inline-block;
+    background: #286B4C;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s ease;
+    border: 2px solid #286B4C;
+}
+
+.btn-learn:hover {
+    background: transparent;
+    color: #286B4C;
+}
+
+@media (max-width: 768px) {
+    .partnership-box {
+        margin: 20px;
+        padding: 30px;
+    }
+    
+    .initiative-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+
+   <!--Footer-->
+   <!--Footer-->
+  <footer class="padding_top bottom_half">
+    <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-home"></i>10891 Cory Lake Drive,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(205)-492-0466</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
+            <ul class="about_foot">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+    
+
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 
+
+  <script src="js/jquery-2.2.3.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOBKD6V47-g_3opmidcmFapb3kSNAR70U"></script>
+<script src="js/gmap3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootsnav.js"></script>
+  <script src="js/jquery.parallax-1.1.3.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.cubeportfolio.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery.themepunch.tools.min.js"></script>
+  <script src="js/jquery.themepunch.revolution.min.js"></script>
+  <script src="js/revolution.extension.layeranimation.min.js"></script>
+  <script src="js/revolution.extension.navigation.min.js"></script>
+  <script src="js/revolution.extension.parallax.min.js"></script>
+  <script src="js/revolution.extension.slideanims.min.js"></script>
+  <script src="js/revolution.extension.video.min.js"></script>
+  <script src="js/kinetic.js"></script>
+  <script src="js/jquery.final-countdown.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/ai.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>Verdura | Copyright</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+  <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="css/bootsnav.css">
+  <link rel="stylesheet" type="text/css" href="css/settings.css">
+  <link rel="stylesheet" type="text/css" href="css/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link rel="shortcut icon" href="images/titlelogo.png">
+
+
+
+
+</head>
+
+<body>
+
+ 
+
+  <!--HEADER-->
+     <!--HEADER-->
+     <style>
+
+    
+
+      .modern-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0 5rem;
+       background-color: #286B4C;
+       min-height: 90px;
+   }
+   
+   .modern-logo {
+       display: flex;
+       align-items: center;
+       padding: 8px 0;
+       padding-bottom: 35px;
+   }
+   
+   .modern-logo img {
+       height: 100px;
+       width: auto;
+   }
+   
+   .left-nav, .right-nav {
+       flex: 1;
+       display: flex;
+       align-items: center;
+   }
+   
+   .left-nav {
+       justify-content: flex-end;
+       padding-right: 100px;
+   }
+   
+   .right-nav {
+       justify-content: flex-start;
+       padding-left: 100px;
+   }
+   
+   .modern-nav__links {
+       display: flex;
+       gap: 4rem;
+       margin: 0;
+       padding: 0;
+       list-style: none;
+       align-items: center;
+   }
+   
+   .modern-nav__links a {
+       font-family: 'Oswald', sans-serif !important;
+       font-size: 18px;
+       font-weight: 500;
+       color: white;
+       text-decoration: none;
+       transition: color 0.3s ease;
+       line-height: 90px;
+       display: block;
+   }
+   
+   .modern-nav__links a:hover {
+       color: rgba(255, 255, 255, 0.8);
+   }
+   
+   /* Dropdown Menu */
+   .modern-nav__links li {
+       position: relative;
+   }
+   
+   .modern-dropdown-content {
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background: white;
+       min-width: 220px;
+       border-radius: 8px;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+       padding: 12px 0;
+       z-index: 1000;
+       
+       /* Animation properties */
+       transform-origin: top center;
+       transform: scaleY(0);
+       opacity: 0;
+       transition: transform 0.2s ease, opacity 0.2s ease;
+   }
+   
+   .modern-nav__links li:hover .modern-dropdown-content {
+       transform: scaleY(1);
+       opacity: 1;
+   }
+   
+   .modern-dropdown-content a {
+       font-family: 'Oswald', sans-serif !important;
+       color: #286B4C !important;
+       padding: 12px 25px;
+       display: block;
+       font-size: 16px;
+       text-align: left;
+       line-height: normal !important;
+       transition: background-color 0.2s ease, color 0.2s ease;
+   }
+   
+   .modern-dropdown-content a:hover {
+       background: #286B4C;
+       color: white !important;
+   }
+   
+   /* Triangle indicator */
+   .modern-dropdown-content::before {
+       content: '';
+       position: absolute;
+       top: -8px;
+       left: 30px;
+       border-left: 8px solid transparent;
+       border-right: 8px solid transparent;
+       border-bottom: 8px solid white;
+   }
+   
+   /* Mobile Menu Styles */
+   #mobile__menu {
+       display: none;
+   }
+   
+   /* Mobile Overlay */
+   .modern-overlay {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1001;
+       top: 0;
+       left: 0;
+       background-color: #286B4C;
+       overflow-x: hidden;
+       transition: 0.5s;
+   }
+   
+   .modern-overlay__content {
+       position: relative;
+       top: 25%;
+       width: 100%;
+       text-align: center;
+       margin-top: 30px;
+   }
+   
+   .modern-overlay__content a {
+       padding: 8px;
+       text-decoration: none;
+       font-size: 24px;
+       color: white;
+       display: block;
+       transition: 0.3s;
+       margin: 10px 0;
+   }
+   
+   .modern-overlay__content a:hover {
+       color: rgba(255, 255, 255, 0.8);
+   }
+   
+   .modern-overlay .modern-close {
+       position: absolute;
+       top: 20px;
+       right: 45px;
+       font-size: 60px;
+       color: white;
+       cursor: pointer;
+   }
+   
+   /* Responsive Design */
+   @media screen and (max-width: 800px) {
+       .left-nav, .right-nav {
+           display: none;
+       }
+       
+       .modern-header {
+           justify-content: center;
+           padding: 0 2rem;
+       }
+       
+       .modern-logo img {
+           height: 70px;
+       }
+   
+       #mobile__menu {
+           display: block;
+       }
+   }
+   
+   /* Mobile Menu Button */
+   .mobile-menu-btn {
+       display: none;
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       z-index: 1002;
+       background: none;
+       border: none;
+       color: white;
+       font-size: 24px;
+       cursor: pointer;
+   }
+   
+   @media screen and (max-width: 800px) {
+       .mobile-menu-btn {
+           display: block;
+       }
+   }
+     </style>
+   </head>
+   
+   <body>
+     <!-- Add this right after the opening <body> tag -->
+     <button class="mobile-menu-btn" onclick="openNav()">
+       <i class="fa fa-bars"></i>
+     </button>
+   
+     <!-- Modern Header -->
+     <header class="modern-header">
+       <!-- Left Navigation -->
+       <nav class="left-nav">
+           <ul class="modern-nav__links">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="benefits.html">About</a></li>
+               <li>
+                   <a href="#">Menu</a>
+                   <div class="modern-dropdown-content">
+                       <a href="appetizers.html">Appetizers</a>
+                       <a href="mains.html">Main/Entrees</a>
+                       <a href="desserts.html">Desserts</a>
+                   </div>
+               </li>
+           </ul>
+       </nav>
+   
+       <!-- Center Logo -->
+       <a class="modern-logo" href="index.html">
+           <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+       </a>
+   
+       <!-- Right Navigation -->
+       <nav class="right-nav">
+           <ul class="modern-nav__links">
+               <li>
+                   <a href="community.html">Community</a>
+               </li>
+               <li>
+                   <a href="#">Reserve</a>
+                   <div class="modern-dropdown-content">
+                       <a href="reserve.html">Dine In</a>
+                       <a href="CarryOut.html">Order To-Go</a>
+                   </div>
+               </li>
+               <li><a href="contact.html">Contact</a></li>
+           </ul>
+       </nav>
+     </header>
+
+
+  <!--Image Header-->
+  <section class="page_header padding copyright_header">
+    <div class="container">
+      <div class="header_content padding">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 style="color:white" class="uppercase"> Copyright</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page_menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="hidden">hidden</h3>
+          <ul class="breadcrumb">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li style="color: white;">Reference</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+  <div class="jobsdescp">
+   <h3>Our Privacy Policy</h3>
+   <br>
+   <p>This Privacy Policy document is part of a student project created for the Technology Student Association (TSA) Webmaster competition. As this is a demonstration website, no real user data is collected or stored. Any forms or interactive elements are for display purposes only and do not process actual information.</p>
+   <p>While we've implemented this privacy policy to demonstrate best practices in web development, please note that Verdura is a fictional restaurant created solely for educational purposes.</p>
+   <br>
+   <br>
+   
+
+   <h3>TSA Competition Disclaimer</h3>
+   <br>
+   <p>This website was created for the Technology Student Association (TSA) Webmaster competition and is not associated with a real restaurant or business. Verdura is a fictional establishment designed to showcase web development and design skills for educational purposes only.</p>
+   <br>
+   <br>
+
+   <h3>Image Licensing</h3>
+   <br>
+   <p>Images on this website are sourced from:</p>
+   <ul style="color: #286B4C;">
+    <li>Adobe Stock - Used under Standard License, which permits usage for websites and digital media</li>
+    <li>Unsplash - Used under the Unsplash License, which grants free usage rights for all purposes, including commercial use, without requiring permission or attribution (though attribution is appreciated)</li>
+   </ul>
+   <br>
+   <br>
+
+   <h3>Project Information</h3>
+   <br>
+   <p>This project was developed by students for the 2025 TSA Webmaster competition. All content, including the restaurant concept, menu items, and business model, is fictional and created solely for demonstration purposes.</p>
+   <br>
+   <p>While the partnerships mentioned (such as Feeding Tampa Bay and FWAF) are real organizations, any implied associations are purely fictional and part of the competition scenario.</p>
+   <br>
+   <br>
+
+   <h3>Sources</h3>
+   <br>
+   <p>Elements and resources were obtained from:</p>
+   <ul style="color: #286B4C;">
+       <a href="https://stock.adobe.com" target="_blank"><li>Adobe Stock - Commercial image licensing</li></a>
+       <a href="https://unsplash.com" target="_blank"><li>Unsplash - Free-to-use image platform</li></a>
+   </ul>
+
+   <h3>Technical Framework & Dependencies</h3>
+   <br>
+   <p>This website was developed using the following frameworks, libraries, and plugins. Note that while some of these were included in the initial setup, not all features were implemented in the final design:</p>
+   <br>
+   <ul style="color: #286B4C;">
+       <li><strong>Core Frameworks:</strong>
+           <ul>
+               <li>Bootstrap 4.0 - Frontend framework for responsive design</li>
+               <li>jQuery 2.2.3 - JavaScript library for DOM manipulation</li>
+           </ul>
+       </li>
+       <br>
+       <li><strong>Animation & Visual Effects:</strong>
+           <ul>
+               <li>Animate.min.css - For element animations</li>
+               <li>Owl Carousel - Responsive carousel slider</li>
+               <li>Revolution Slider - Advanced slider plugin (included but not implemented)</li>
+               <li>jQuery Parallax - For parallax scrolling effects</li>
+           </ul>
+       </li>
+       <br>
+       <li><strong>UI Components:</strong>
+           <ul>
+               <li>Font Awesome - Icon library and toolkit</li>
+               <li>Bootsnav - Bootstrap navigation menu</li>
+               <li>Cubeportfolio - Portfolio and grid layouts (included but not implemented)</li>
+               <li>Fancybox - Lightbox gallery implementation (included but not implemented)</li>
+           </ul>
+       </li>
+       <br>
+       <li><strong>Additional Features:</strong>
+           <ul>
+               <li>Google Maps API - For location services (included but not implemented)</li>
+               <li>Final Countdown - For timer implementations (included but not implemented)</li>
+               <li>Kinetic.js - For canvas animations (included but not implemented)</li>
+           </ul>
+       </li>
+   </ul>
+   <br>
+   <p>All frameworks and plugins are included in our documentation, though some features were not utilized in the final website. The implemented tools were chosen specifically to create an efficient, responsive, and user-friendly web experience while also following the TSA guidelines.</p>
+
+   <h3>Framework Implementation Statement</h3>
+   <br>
+   <p>This website uses Bootstrap as a framework system. We affirm that all templates and themes used with this framework were custom-built by our team, with no pre-built templates or themes used.</p>
+   <br>
+
+   <h3>Required Documentation</h3>
+   <br>
+   <ul style="color: #286B4C;">
+       <li><a href="CopyrightTSA_AH_YR_AM_2025_Webmaster.pdf">Student Copyright Checklist (PDF)</a></li>
+       <li><a href="Copy of Verdura Documentation.pdf">Verdura Stock Photos Documentation (PDF)</a></li>
+       <li><a href="WorklogWebmaster2025.pdf">Work Log (PDF)</a></li>
+   </ul>
+   <br>
+  </div>
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+
+
+
+
+      <!--Footer-->
+  <!--Footer-->
+  <footer class="padding_top bottom_half">
+    <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-home"></i>10891 Cory Lake Drive,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(205)-492-0466</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
+            <ul class="about_foot">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+    
+
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+ 
+
+  <script src="js/jquery-2.2.3.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOBKD6V47-g_3opmidcmFapb3kSNAR70U"></script>
+  <script src="js/gmap3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootsnav.js"></script>
+  <script src="js/jquery.parallax-1.1.3.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.cubeportfolio.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery.themepunch.tools.min.js"></script>
+  <script src="js/jquery.themepunch.revolution.min.js"></script>
+  <script src="js/revolution.extension.layeranimation.min.js"></script>
+  <script src="js/revolution.extension.navigation.min.js"></script>
+  <script src="js/revolution.extension.parallax.min.js"></script>
+  <script src="js/revolution.extension.slideanims.min.js"></script>
+  <script src="js/revolution.extension.video.min.js"></script>
+  <script src="js/kinetic.js"></script>
+  <script src="js/jquery.final-countdown.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/ai.js"></script>
+
+</body>
+
+</html>
