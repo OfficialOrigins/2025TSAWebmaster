@@ -1,0 +1,798 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>VitaFlora | How To Apply</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+  <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="css/bootsnav.css">
+  <link rel="stylesheet" type="text/css" href="css/settings.css">
+  <link rel="stylesheet" type="text/css" href="css/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="shortcut icon" href="images/titlelogo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet"> -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- New Navigation Styles -->
+  <style>
+    /* Navigation specific styles */
+    /* Navigation specific styles */
+.modern-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: #286B4C;
+    min-height: 90px;
+}
+
+.modern-logo {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    padding-bottom: 35px;
+}
+
+.modern-logo img {
+    height: 100px;
+    width: auto;
+}
+
+.left-nav, .right-nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.left-nav {
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.right-nav {
+    justify-content: flex-start;
+    padding-left: 100px;
+}
+
+.modern-nav__links {
+    display: flex;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.modern-nav__links a {
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 90px;
+    display: block;
+}
+
+.modern-nav__links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown Menu */
+.modern-nav__links li {
+    position: relative;
+}
+
+.modern-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 12px 0;
+    z-index: 1000;
+    
+    /* Animation properties */
+    transform-origin: top center;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modern-nav__links li:hover .modern-dropdown-content {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.modern-dropdown-content a {
+    font-family: 'Oswald', sans-serif !important;
+    color: #286B4C !important;
+    padding: 12px 25px;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    line-height: normal !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modern-dropdown-content a:hover {
+    background: #286B4C;
+    color: white !important;
+}
+
+/* Triangle indicator */
+.modern-dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 30px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+/* Mobile Menu Styles */
+#mobile__menu {
+    display: none;
+}
+
+/* Mobile Overlay */
+.modern-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #286B4C;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.modern-overlay__content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.modern-overlay__content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+
+.modern-overlay__content a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.modern-overlay .modern-close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+    .left-nav, .right-nav {
+        display: none;
+    }
+    
+    .modern-header {
+        justify-content: center;
+        padding: 0 2rem;
+    }
+    
+    .modern-logo img {
+        height: 70px;
+    }
+
+    #mobile__menu {
+        display: block;
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Add this right after the opening <body> tag -->
+  <button class="mobile-menu-btn" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Modern Header -->
+  <header class="modern-header">
+    <!-- Left Navigation -->
+    <nav class="left-nav">
+        <ul class="modern-nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="benefits.html">About</a></li>
+            <li>
+                <a href="#">Menu</a>
+                <div class="modern-dropdown-content">
+                    <a href="appetizers.html">Appetizers</a>
+                    <a href="mains.html">Main/Entrees</a>
+                    <a href="desserts.html">Desserts</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Center Logo -->
+    <a class="modern-logo" href="index.html">
+        <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+    </a>
+
+    <!-- Right Navigation -->
+    <nav class="right-nav">
+        <ul class="modern-nav__links">
+            <li>
+                <a href="#">Community</a>
+                <div class="modern-dropdown-content">
+                    <a href="howtosupport.html">How to Support?</a>
+                    <a href="outreach.html">Community Outreach</a>
+                    <a href="donate.html">Donate Now</a>
+                </div>
+            </li>
+            <li><a href="reserve.html">Reserve</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Add this right after the header -->
+  <div id="mobileNav" class="mobile-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+    <div class="mobile-nav-content">
+      <a href="index.html">Home</a>
+      <a href="benefits.html">About</a>
+      <a href="appetizers.html">Appetizers</a>
+      <a href="mains.html">Main/Entrees</a>
+      <a href="desserts.html">Desserts</a>
+      <a href="howtosupport.html">How to Support?</a>
+      <a href="community.html">Community Outreach</a>
+      <a href="donatenow.html">Donate Now</a>
+      <a href="reserve.html">Reserve</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!--Image Header-->
+  <section class="page_header padding howtoapply_header">
+    <div class="container">
+      <div class="header_content padding">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 class="uppercase"> How To Apply</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section class="reservation-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-container">
+                    <div class="verdura-header">
+                        <h1>Order To-Go</h1> 
+                    </div>
+
+                    <form class="reservation-form" id="reservationForm">
+                        <!-- Contact Information -->
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="name"
+                                   placeholder="John Smith" 
+                                   onkeydown="return preventNumbers(event)"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mobile Number:</label>
+                            <div class="phone-input">
+                                <select class="country-select">
+                                    <option>US +1</option>
+                                </select>
+                                <input type="tel" 
+                                       class="form-control" 
+                                       id="phone" 
+                                       placeholder="(XXX) XXX-XXXX" 
+                                       maxlength="14"
+                                       pattern="\(\d{3}\) \d{3}-\d{4}"
+                                       required>
+                            </div>
+                        </div>
+
+                        <!-- Pickup Date & Time -->
+                        <div class="form-group">
+                            <label>Pickup Date:*</label>
+                            <input type="text" 
+                                   class="form-control datepicker" 
+                                   id="reservationDate" 
+                                   placeholder="Select Date" 
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Pickup Time:</label>
+                            <select class="form-control" required>
+                                <option value="">Select time</option>
+                                <option value="13:30">1:30 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="14:30">2:30 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="15:30">3:30 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="16:30">4:30 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="17:30">5:30 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="19:30">7:30 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                            </select>
+                        </div>
+
+                        <!-- Menu Items -->
+                        <div class="menu-section">
+                            <!-- Appetizers -->
+                            <div class="menu-category">
+                                <div class="category-header" onclick="toggleCategory('appetizers')">
+                                    <div class="header-content">
+                                        <h3>Appetizers</h3>
+                                        <a href="appetizers.html" class="menu-link">View Full Menu</a>
+                                    </div>
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                                <div class="menu-items" id="appetizers">
+                                    <div class="menu-item">
+                                        <label>Greek-Style Vegetable Wraps ($12.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Healing Hummus Platter ($14.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Herbal Falafel ($13.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Garden Healing Soup ($8.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Vitality Salad ($13.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Herbal Bruschetta ($11.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Spicy Quinoa Salad ($14.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Mediterranean Stuffed Peppers ($17.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Vitality Avocado Toast ($11.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Main Courses -->
+                            <div class="menu-category">
+                                <div class="category-header" onclick="toggleCategory('mains')">
+                                    <div class="header-content">
+                                        <h3>Main Courses</h3>
+                                        <a href="mains.html" class="menu-link">View Full Menu</a>
+                                    </div>
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                                <div class="menu-items" id="mains">
+                                    <div class="menu-item">
+                                        <label>Mediterranean Bowl ($16.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Buddha Bowl ($15.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Ancient Grains Bowl ($17.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Tuscan Bean Chili ($14.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Nourish Bowl ($16.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Provençal Ratatouille ($20.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Plant-Based Teriyaki Bowl ($18.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Spiced Lentil Daal ($17.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Masala Lentil Bowl ($17.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Golden Falafel Bowl ($18.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desserts -->
+                            <div class="menu-category">
+                                <div class="category-header" onclick="toggleCategory('desserts')">
+                                    <div class="header-content">
+                                        <h3>Desserts</h3>
+                                        <a href="desserts.html" class="menu-link">View Full Menu</a>
+                                    </div>
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                                <div class="menu-items" id="desserts">
+                                    <div class="menu-item">
+                                        <label>Healing Honey Baklava ($9.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Caramel Date Cheesecake ($10.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Raspberry Chia Pudding ($8.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Maple Pecan Cookies ($8.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Golden Banana Ice Cream ($8.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                    <div class="menu-item">
+                                        <label>Healing Kunafa ($8.99)</label>
+                                        <input type="number" min="0" max="10" value="0" class="quantity-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add this before the Special Instructions -->
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-details">
+                                <div class="summary-line">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotal">$0.00</span>
+                                </div>
+                                <div class="summary-line">
+                                    <span>Tax (6.5%):</span>
+                                    <span id="tax">$0.00</span>
+                                </div>
+                                <div class="summary-line total">
+                                    <span>Total:</span>
+                                    <span id="total">$0.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Special Instructions -->
+                        <div class="form-group">
+                            <label>Special Instructions:</label>
+                            <textarea class="form-control" 
+                                     placeholder="Any special requests or dietary restrictions?"
+                                     rows="4"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group text-center">
+                            <button type="submit" class="contact-submit-btn">Place Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Success Popup -->
+  <div class="success-popup" id="successPopup">
+    <div class="popup-content">
+        <h2>Thank You!</h2>
+        <p>Your order has been placed. We'll confirm your order within 24 hours.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="padding_top bottom_half">
+    <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-home"></i>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(813)-833-9852</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
+            <ul class="about_foot">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Follow Us</h4>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add this script before the closing </body> tag -->
+  <script>
+  function openNav() {
+    document.getElementById("mobileNav").style.width = "100%";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    document.getElementById("mobileNav").style.width = "0%";
+    document.body.style.overflow = "auto";
+  }
+
+  // Initialize Flatpickr
+  flatpickr("#reservationDate", {
+    enableTime: false,
+    dateFormat: "m/d/Y",
+    minDate: "today",
+    maxDate: new Date().fp_incr(90), // Allow bookings up to 90 days in advance
+    disable: [
+        function(date) {
+            // Disable past dates
+            return date < new Date();
+        }
+    ],
+    locale: {
+        firstDayOfWeek: 1 // Start week on Monday
+    }
+  });
+
+  // Phone number formatting
+  document.getElementById('phone').addEventListener('input', function(e) {
+    let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+  });
+
+  // Phone number validation
+  document.getElementById('phone').addEventListener('keypress', function(e) {
+    if (!/^\d$/.test(e.key) && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
+        e.preventDefault();
+    }
+  });
+
+  // Reservation form submission handling
+  const reservationForm = document.getElementById('reservationForm');
+  const successPopup = document.getElementById('successPopup');
+
+  function showPopup() {
+    successPopup.classList.add('show');
+  }
+
+  function closePopup() {
+    successPopup.classList.remove('show');
+    reservationForm.reset();
+  }
+
+  reservationForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    showPopup();
+  });
+
+  function preventNumbers(e) {
+    // Get the pressed key
+    const char = e.key;
+    
+    // If it's a number, prevent it
+    if (!isNaN(char) || e.keyCode >= 96 && e.keyCode <= 105) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Allow control keys like backspace, delete, arrows
+    if (e.ctrlKey || e.altKey || e.metaKey || 
+        ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'].includes(e.key)) {
+        return true;
+    }
+    
+    // Only allow letters and space
+    return /^[A-Za-z\s]$/.test(char);
+  }
+
+  // Add this to your existing script
+  document.getElementById('name').addEventListener('paste', function(e) {
+    e.preventDefault();
+    let pastedText = (e.clipboardData || window.clipboardData).getData('text');
+    // Remove all numbers and special characters
+    pastedText = pastedText.replace(/[^A-Za-z\s]/g, '');
+    // Insert the cleaned text
+    document.execCommand('insertText', false, pastedText);
+  });
+
+  // Additional cleanup on any input
+  document.getElementById('name').addEventListener('input', function(e) {
+    this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+  });
+
+  function toggleCategory(categoryId) {
+    const items = document.getElementById(categoryId);
+    const header = items.previousElementSibling;
+    
+    // Toggle active class for items
+    items.classList.toggle('active');
+    
+    // Toggle active class for header (arrow rotation)
+    header.classList.toggle('active');
+  }
+
+  // Open the first category by default
+  document.addEventListener('DOMContentLoaded', function() {
+    toggleCategory('appetizers');
+  });
+
+  // Add this to your existing script
+  document.querySelectorAll('.quantity-input').forEach(input => {
+    input.addEventListener('input', function() {
+        // Ensure the value doesn't exceed 10
+        if (this.value > 10) {
+            this.value = 10;
+        }
+        // Ensure the value isn't negative
+        if (this.value < 0) {
+            this.value = 0;
+        }
+    });
+
+    // Prevent manual entry of numbers > 10
+    input.addEventListener('keydown', function(e) {
+        if (this.value.length >= 2 && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
+            e.preventDefault();
+        }
+    });
+  });
+
+  // Constants for tax calculation
+  const TAX_RATE = 0.065; // 6.5%
+
+  // Function to extract price from menu item label
+  function extractPrice(label) {
+    const priceMatch = label.match(/\$(\d+\.\d+)/);
+    return priceMatch ? parseFloat(priceMatch[1]) : 0;
+  }
+
+  // Function to calculate totals
+  function calculateTotals() {
+    let subtotal = 0;
+    
+    // Get all quantity inputs
+    document.querySelectorAll('.quantity-input').forEach(input => {
+        const quantity = parseInt(input.value) || 0;
+        const price = extractPrice(input.previousElementSibling.textContent);
+        subtotal += price * quantity;
+    });
+
+    // Calculate tax and total
+    const tax = subtotal * TAX_RATE;
+    const total = subtotal + tax;
+
+    // Update display
+    document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+    document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+    document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+  }
+
+  // Add event listeners to all quantity inputs
+  document.querySelectorAll('.quantity-input').forEach(input => {
+    input.addEventListener('input', calculateTotals);
+    input.addEventListener('change', calculateTotals);
+  });
+
+  // Calculate initial totals
+  document.addEventListener('DOMContentLoaded', calculateTotals);
+  </script>
+</body>
+</html>

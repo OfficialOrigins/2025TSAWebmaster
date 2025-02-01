@@ -1,0 +1,47 @@
+To access the website please click on the following link provided below:
+
+https:\\vitafloracareers.com
+
+
+
+To download source code please use either link provided below to get access:
+
+Github Link- https://github.com/SaiV19/MiddletonHighSchool_WebsiteCodingandDevelopment_VutukuriSaicharan_RajNishka_KasibhatlaSashreek
+
+OR
+
+Google Drive Link- https://drive.google.com/drive/u/2/folders/1Ze1H6QvsFqM-uGbrUdayhSEfYDM_lVjO
+
+*Note-You do NOT need to click on both links, either link will provide the full source code*
+
+
+
+Step by step instruction to download source code-  
+
+If using the GitHub Link: 
+
+1. After opening the link, you will be taken to the repository page 
+
+2. Once at this page, please click on the green "<> CODE" button 
+
+3. Click on the "Download ZIP" button, this will extract all the files into a ZIP folder 
+
+4. To open the content in the ZIP folder, extract the folder into the destination of your choice and open the folder once extracted 
+
+5. Open the "MiddletonHighSchool_WebsiteCodingandDevelopment_VutukuriSaicharan_RajNishka_KasibhatlaSashreek-main.zip" folder where you will get access to the source code files, along with other content 
+
+6. Open any file(s) of your choice in your preferred web browser and code editor 
+
+  
+
+If using the Google Drive Link: 
+
+1. After opening the link, you will be taken to the Google Drive page  
+
+2. Once at this page, please click on the blue "Download all" button, this will extract all the files into a ZIP folder 
+
+3. To open the content in the ZIP folder, extract the folder into the destination of your choice and open the folder once extracted 
+
+4. Open the "MiddletonHighSchool_WebsiteCodingandDevelopment_VutukuriSaicharan_RajNishka_KasibhatlaSashreek" folder where you will get access to the source code files, along with other content 
+
+5. Open any file(s) of your choice in your preferred web browser and code editor 

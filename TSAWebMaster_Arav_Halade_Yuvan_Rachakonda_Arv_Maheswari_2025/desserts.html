@@ -1,0 +1,1152 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>VitaFlora | Jobs</title>
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+  <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="css/bootsnav.css">
+  <link rel="stylesheet" type="text/css" href="css/settings.css">
+  <link rel="stylesheet" type="text/css" href="css/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet"> -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <link rel="shortcut icon" href="images/titlelogo.png">
+</head>
+
+<body>
+  <!--HEADER-->
+  <style>
+    /* Navigation specific styles */
+    /* Navigation specific styles */
+.modern-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: #286B4C;
+    min-height: 90px;
+}
+
+.modern-logo {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    padding-bottom: 35px;
+}
+
+.modern-logo img {
+    height: 100px;
+    width: auto;
+}
+
+.left-nav, .right-nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.left-nav {
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.right-nav {
+    justify-content: flex-start;
+    padding-left: 100px;
+}
+
+.modern-nav__links {
+    display: flex;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.modern-nav__links a {
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 90px;
+    display: block;
+}
+
+.modern-nav__links a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Dropdown Menu */
+.modern-nav__links li {
+    position: relative;
+}
+
+.modern-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 12px 0;
+    z-index: 1000;
+    
+    /* Animation properties */
+    transform-origin: top center;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modern-nav__links li:hover .modern-dropdown-content {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.modern-dropdown-content a {
+    font-family: 'Oswald', sans-serif !important;
+    color: #286B4C !important;
+    padding: 12px 25px;
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    line-height: normal !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modern-dropdown-content a:hover {
+    background: #286B4C;
+    color: white !important;
+}
+
+/* Triangle indicator */
+.modern-dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 30px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+}
+
+/* Mobile Menu Styles */
+#mobile__menu {
+    display: none;
+}
+
+/* Mobile Overlay */
+.modern-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #286B4C;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.modern-overlay__content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.modern-overlay__content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+
+.modern-overlay__content a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.modern-overlay .modern-close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+    .left-nav, .right-nav {
+        display: none;
+    }
+    
+    .modern-header {
+        justify-content: center;
+        padding: 0 2rem;
+    }
+    
+    .modern-logo img {
+        height: 70px;
+    }
+
+    #mobile__menu {
+        display: block;
+    }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Add this right after the opening <body> tag -->
+  <button class="mobile-menu-btn" onclick="openNav()">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Modern Header -->
+  <header class="modern-header">
+    <!-- Left Navigation -->
+    <nav class="left-nav">
+        <ul class="modern-nav__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="benefits.html">About</a></li>
+            <li>
+                <a href="#">Menu</a>
+                <div class="modern-dropdown-content">
+                    <a href="appetizers.html">Appetizers</a>
+                    <a href="mains.html">Main/Entrees</a>
+                    <a href="desserts.html">Desserts</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Center Logo -->
+    <a class="modern-logo" href="index.html">
+        <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+    </a>
+
+    <!-- Right Navigation -->
+    <nav class="right-nav">
+        <ul class="modern-nav__links">
+            <li>
+                <a href="#">Community</a>
+                <div class="modern-dropdown-content">
+                    <a href="howtosupport.html">How to Support?</a>
+                    <a href="community.html">Community Outreach</a>
+                    <a href="donatenow.html">Donate Now</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Reserve</a>
+                <div class="modern-dropdown-content">
+                    <a href="reserve.html">Dine In</a>
+                    <a href="CarryOut.html">Order To-Go</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Add this right after the header -->
+  <div id="mobileNav" class="mobile-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+    <div class="mobile-nav-content">
+      <a href="index.html">Home</a>
+      <a href="benefits.html">About</a>
+      <a href="appetizers.html">Appetizers</a>
+      <a href="mains.html">Main/Entrees</a>
+      <a href="desserts.html">Desserts</a>
+      <a href="howtosupport.html">How to Support?</a>
+      <a href="outreach.html">Community Outreach</a>
+      <a href="donate.html">Donate Now</a>
+      <a href="reserve.html">Reserve</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!--Image Header-->
+  <section class="page_header padding jobs_header">
+    <div class="container">
+      <div class="header_content text-center">
+        <h1 class="uppercase">Jobs</h1>
+      </div>
+    </div>
+  </section>
+
+  <!--Breadcrumb-->
+  <section class="page_menu">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li class="active">Jobs</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--Jobs Section-->
+  <section id="availability" class="padding">
+    <div class="container">
+      <div class="text-right">
+        <h5 class="result uppercase">Showing 1-9 of 9 results</h5>
+      </div>
+  
+      <!-- First Row of Cards -->
+      <div class="row">
+        <!-- Baklava -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/dessert/Baklava.png" alt="Healing Baklava">
+            <div class="card-content">
+              <h2>Healing Honey Baklava</h2>
+              <p class="description">Layers of phyllo filled with healing nuts and spices, drizzled with local honey and rose water.</p>
+              <div class="details">
+                <span class="dietary-info">Honey-Sweetened • Nutty</span>
+                <span class="portion">3 pieces</span>
+              </div>
+              <div class="price">$9.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('baklava')">
+                Dietary & Allergy Information
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Date Balls -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/dessert/Cheesecake.png" alt="Caramel Date Cheesecake">
+            <div class="card-content">
+              <h2>Caramel Date Cheesecake</h2>
+              <p class="description">Silky cashew-based cheesecake with a salted date caramel swirl, almond-date crust, and candied pecans.</p>
+              <div class="details">
+                <span class="dietary-info">Raw • Creamy • GF</span>
+                <span class="portion">1 slice</span>
+              </div>
+              <div class="price">$10.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('datecheesecake')">
+                Dietary & Allergy Information
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chia Pudding -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/dessert/Raspberyy Chia pudding.png" alt="Raspberry Chia Pudding">
+            <div class="card-content">
+              <h2>Raspberry Chia Pudding</h2>
+              <p class="description">Creamy coconut chia pudding layered with fresh raspberry concentrate, topped with toasted almonds.</p>
+              <div class="details">
+                <span class="dietary-info">Fruity • Omega-Rich</span>
+                <span class="portion">8 oz</span>
+              </div>
+              <div class="price">$8.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('chiapudding')">
+                Dietary & Allergy Information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row of Cards -->
+      <div class="row">
+        <!-- Orange Cake -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/dessert/Cookiues.png" alt="Artisanal Nut Cookies">
+            <div class="card-content">
+              <h2>Maple Pecan Cookies</h2>
+              <p class="description">Buttery almond-flour shortbread dressed with toasted pecans, drizzled with maple glaze.</p>
+              <div class="details">
+                <span class="dietary-info">Buttery • GF</span>
+                <span class="portion">3 cookies</span>
+              </div>
+              <div class="price">$8.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('nutcookies')">
+                Dietary & Allergy Information
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nice Cream -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/dessert/Banana.png" alt="Banana Ice Cream">
+            <div class="card-content">
+              <h2>Golden Banana Ice Cream</h2>
+              <p class="description">Creamy banana-based ice cream blended with raw cacao, maple syrup, and warming spices.</p>
+              <div class="details">
+                <span class="dietary-info">Naturally Sweet • Creamy</span>
+                <span class="portion">2 scoops</span>
+              </div>
+              <div class="price">$8.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('nicecream')">
+                Dietary & Allergy Information
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kunafa -->
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/food/dessert/Knafa.png" alt="Kunafa">
+            <div class="card-content">
+              <h2>Healing Kunafa</h2>
+              <p class="description">Shredded phyllo with cashew cream, pistachios, and orange blossom syrup.</p>
+              <div class="details">
+                <span class="dietary-info">Crispy • Sweet</span>
+                <span class="portion">1 piece</span>
+              </div>
+              <div class="price">$10.99</div>
+              <button class="allergy-info-btn" onclick="openAllergyModal('kunafa')">
+                Dietary & Allergy Information
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+  </section>
+
+  <!--How to Apply Button-->
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <a href="reserve.html"><button class="applybutton" style="height:auto">Reserve a table</button></a>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!--Footer-->
+  <footer class="padding_top bottom_half">
+    <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-home"></i>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(813)-833-9852</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
+            <ul class="about_foot">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Follow Us</h4>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--Chatbot Section-->
+  <button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chat With Us</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there!<br>How may I assist you today?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+
+  <script src="js/jquery-2.2.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/functions.js"></script>
+
+
+  <div id="jobModal" class="job-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body">
+            <!-- Spring Rolls Content -->
+            <div id="springrolls-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Rice paper wraps filled with fresh carrots, cucumber, purple cabbage, mint, cilantro, and our signature VitaBlend™ herbs including holy basil and lemongrass.</p>
+                
+                <h3>VitaBlend™ Dipping Sauce</h3>
+                <p>House-made sauce featuring tamari, ginger, garlic, and medicinal mushroom extract.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> None of the major allergens</p>
+                    <p><strong>May contain traces of:</strong> Soy (in dipping sauce)</p>
+                    <p><strong>Kitchen Notice:</strong> Prepared in a facility that also processes nuts, wheat, and soy</p>
+                </div>
+            </div>
+
+            <!-- Hummus Platter Content -->
+            <div id="hummus-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Organic chickpeas, tahini, olive oil, lemon, garlic, and our therapeutic herb blend featuring turmeric, oregano, and thyme.</p>
+                
+                <h3>Served With</h3>
+                <p>Warm gluten-free pita bread, organic carrots, cucumber, bell peppers, and cherry tomatoes.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Sesame (tahini)</p>
+                    <p><strong>May contain traces of:</strong> Gluten, nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Gluten-free pita available upon request</p>
+                </div>
+            </div>
+
+            <!-- Wellness Bites Content -->
+            <div id="wellnessbites-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Medjool dates, almonds, walnuts, chia seeds, cacao, coconut, and our adaptogenic herb blend featuring ashwagandha and rhodiola.</p>
+                
+                <h3>Nutritional Benefits</h3>
+                <p>Rich in healthy fats, fiber, and plant-based protein. Enhanced with stress-reducing adaptogens.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Tree nuts (almonds, walnuts), Coconut</p>
+                    <p><strong>May contain traces of:</strong> Other tree nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Not suitable for nut allergies</p>
+                </div>
+            </div>
+
+            <!-- Garden Soup Content -->
+            <div id="gardensoup-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Seasonal organic vegetables, medicinal mushrooms (reishi, shiitake), healing herbs (thyme, rosemary, sage), vegetable broth, and our immune-boosting spice blend.</p>
+                
+                <h3>Served With</h3>
+                <p>Fresh-baked gluten-free herb bread and microgreens garnish.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Celery</p>
+                    <p><strong>May contain traces of:</strong> Gluten (in bread)</p>
+                    <p><strong>Kitchen Notice:</strong> All vegetables are organic and locally sourced when possible</p>
+                </div>
+            </div>
+
+            <!-- Vitality Salad Content -->
+            <div id="vitalitysalad-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Mixed organic greens, spinach, kale, sprouted seeds (sunflower, pumpkin), goji berries, and our signature herb blend featuring nettle and dandelion leaf.</p>
+                
+                <h3>Citrus Dressing</h3>
+                <p>Cold-pressed olive oil, fresh citrus juice blend, local honey, and adaptogenic mushroom powder.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Seeds</p>
+                    <p><strong>May contain traces of:</strong> Tree nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Honey can be substituted with agave for vegan option</p>
+                </div>
+            </div>
+
+            <!-- Herbal Bruschetta Content -->
+            <div id="bruschetta-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Artisan sourdough bread, heirloom tomatoes, fresh basil, oregano, garlic, and our house-made herb-infused olive oil.</p>
+                
+                <h3>Garnish</h3>
+                <p>Medicinal microgreens blend and aged balsamic reduction.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Wheat, Gluten</p>
+                    <p><strong>May contain traces of:</strong> Seeds</p>
+                    <p><strong>Kitchen Notice:</strong> Gluten-free bread option available upon request</p>
+                </div>
+            </div>
+
+            <!-- Quinoa Bites Content -->
+            <div id="quinoabites-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Organic quinoa, turmeric, black pepper, healing herbs (sage, thyme), and our proprietary spice blend.</p>
+                
+                <h3>Mint-Yogurt Dip</h3>
+                <p>Greek yogurt, fresh mint, lemon, garlic, and our digestive herb blend.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Dairy (in dip)</p>
+                    <p><strong>May contain traces of:</strong> Nuts, Seeds</p>
+                    <p><strong>Kitchen Notice:</strong> Vegan yogurt alternative available</p>
+                </div>
+            </div>
+
+            <!-- Stuffed Mushrooms Content -->
+            <div id="mushrooms-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Portobello mushrooms, quinoa, medicinal herbs, garlic, onions, and our immune-supporting mushroom blend (chaga, cordyceps).</p>
+                
+                <h3>Garnish</h3>
+                <p>Fresh herbs, microgreens, and truffle-infused olive oil drizzle.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> None of the major allergens</p>
+                    <p><strong>May contain traces of:</strong> Tree nuts, Seeds</p>
+                    <p><strong>Kitchen Notice:</strong> All mushrooms are organically grown</p>
+                </div>
+            </div>
+
+            <!-- Avocado Toast Content -->
+            <div id="avocadotoast-content" class="menu-content" style="display: none;">
+                <h3>Ingredients</h3>
+                <p>Organic sourdough bread, ripe avocados, our signature seed blend (hemp, chia, flax), microgreens, and cold-pressed olive oil.</p>
+                
+                <h3>VitaFlora Seasoning</h3>
+                <p>Pink Himalayan salt, black pepper, nutritional yeast, and our proprietary herb blend.</p>
+                
+                <div class="allergy-info">
+                    <h3>Allergy Information</h3>
+                    <p><strong>Contains:</strong> Gluten, Seeds</p>
+                    <p><strong>May contain traces of:</strong> Tree nuts</p>
+                    <p><strong>Kitchen Notice:</strong> Gluten-free bread available, all seeds are organic</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Allergy Information Modal -->
+<div id="allergyModal" class="modal">
+  <div class="modal-content">
+    <span class="allergy-close">&times;</span>
+    <h2 id="modalTitle">Dietary & Allergy Information</h2>
+    
+    <!-- Baklava Info -->
+    <div id="baklava" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Phyllo dough (wheat), Mixed nuts (walnuts, pistachios), Honey, Rose water, Spices</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Other tree nuts, Sesame</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegetarian<br>✓ Made with local honey<br>✓ Eggless<br>✓ Contains healing spices</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains nuts and gluten - not suitable for nut allergies</p>
+      </div>
+    </div>
+
+    <!-- Date Balls Info -->
+    <div id="dateballs" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Medjool dates, Pistachios, Tahini (sesame), Cardamom, Coconut</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Other tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Gluten-Free<br>✓ Raw<br>✓ No added sugars</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains nuts and sesame - please notify staff of any allergies</p>
+      </div>
+    </div>
+
+    <!-- Chia Pudding Info -->
+    <div id="chiapudding" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Chia seeds, Coconut milk, Fresh raspberries, Almonds, Pure maple syrup</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Gluten-Free<br>✓ Rich in omega-3<br>✓ Antioxidant-Rich</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains coconut and almonds. Can be made nut-free upon request. Please inform server of any allergies.</p>
+      </div>
+    </div>
+
+    <!-- Orange Cake Info -->
+    <div id="nutcookies" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Almond flour, Pecans, Grass-fed butter, Pure maple syrup, Vanilla bean, Pink Himalayan salt</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Other tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Gluten-Free<br>✓ Low Sugar<br>✓ Eggless<br>✓ High in Healthy Fats</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains tree nuts and dairy. Made in a facility that processes various nuts. Please inform server of any allergies.</p>
+      </div>
+    </div>
+
+    <!-- Nice Cream Info -->
+    <div id="nicecream" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Bananas, Raw cacao, Cinnamon, Turmeric, Maple syrup</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Gluten-Free<br>✓ Raw<br>✓ No Added Sugar</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Made in a facility that processes nuts. Please inform server of any allergies.</p>
+      </div>
+    </div>
+
+    <!-- Kunafa Info -->
+    <div id="kunafa" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Shredded phyllo, Cashews, Pistachios, Orange blossom water</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Other tree nuts, Wheat</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Dairy-Free<br>✓ Eggless</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains nuts and gluten - not suitable for nut allergies</p>
+      </div>
+    </div>
+
+    <!-- Brownies Info -->
+    <div id="brownies" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Raw cacao, Dates, Tahini, Adaptogenic mushrooms, Maple syrup</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Sesame, Tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Gluten-Free<br>✓ Raw</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains adaptogenic mushrooms and sesame - please consult with staff about any sensitivities</p>
+      </div>
+    </div>
+
+    <!-- Fig Tart Info -->
+    <div id="figtart" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Almonds, Cashews, Fresh figs, Honey, Dates</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Other tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Gluten-Free<br>✓ No refined sugar<br>✓ Raw crust</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains nuts - not suitable for nut allergies</p>
+      </div>
+    </div>
+
+    <!-- Halva Info -->
+    <div id="halva" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Sesame tahini, Pistachios, Raw honey, Adaptogenic herbs</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Tree nuts</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Gluten-Free<br>✓ High in calcium<br>✓ Rich in minerals</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains sesame and nuts - please notify staff of any allergies</p>
+      </div>
+    </div>
+
+    <!-- Date Cheesecake Info -->
+    <div id="datecheesecake" class="allergy-content">
+      <div class="allergy-section">
+        <h3>Contains</h3>
+        <p>Cashews, Medjool dates, Almonds, Pecans, Coconut cream, Vanilla bean, Sea salt</p>
+      </div>
+      <div class="allergy-section">
+        <h3>May Contain Traces Of</h3>
+        <p>Other tree nuts, Coconut</p>
+      </div>
+      <div class="allergy-section">
+        <h3>Dietary Notes</h3>
+        <p>✓ Vegan<br>✓ Gluten-Free<br>✓ Raw<br>✓ Eggless<br>✓ No Refined Sugar</p>
+      </div>
+      <div class="allergy-warning">
+        <p>Contains various tree nuts. Made in a facility that processes nuts. Please inform server of any allergies.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Updated Card Styling */
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    position: relative;
+    padding: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    padding: 0 10px 20px 10px;
+    background: white;
+}
+
+.card-content h2 {
+    color: #286B4C;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.card-content .description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-content .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* .card-content .price {
+    color: #286B4C;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+    text-align: right;
+    margin: 15px 0;
+} */
+
+/* Modal Updates */
+.job-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.job-modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.job-modal.show .modal-content {
+    transform: translateY(0);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(40, 107, 76, 0.2);
+}
+
+.allergy-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #286B4C;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.allergy-close:hover {
+  color: white;
+  background: #286B4C;
+}
+
+.allergy-info-btn {
+  width: 100%;
+  background: #286B4C;
+  border: 2px solid #286B4C;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.allergy-info-btn:hover {
+  background: white;
+  color: #286B4C;
+}
+
+.allergy-content {
+  display: none;
+}
+
+.allergy-section {
+  margin-bottom: 20px;
+}
+
+.allergy-section h3 {
+  color: #286B4C;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.allergy-warning {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff3cd;
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+}
+
+.allergy-warning p {
+  color: #856404;
+  margin: 0;
+  font-size: 14px;
+}
+
+#modalTitle {
+  color: #286B4C;
+  margin-bottom: 25px;
+  font-family: 'Oswald', sans-serif;
+}
+</style>
+
+<!-- Update the JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+    const modal = document.getElementById('jobModal');
+
+    viewDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.card');
+            const title = card.querySelector('h2').textContent;
+            const contentId = title.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '') + '-content';
+            
+            const contentDiv = document.getElementById(contentId);
+            if (contentDiv) {
+                document.getElementById('modalTitle').textContent = title;
+                document.querySelectorAll('.menu-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                contentDiv.style.display = 'block';
+                modal.style.display = 'block';
+                setTimeout(() => modal.classList.add('show'), 10);
+            }
+        });
+    });
+});
+</script>
+
+<script>
+// Modal functionality
+const modal = document.getElementById('allergyModal');
+const closeBtn = document.querySelector('.allergy-close');
+const allergyContents = document.getElementsByClassName('allergy-content');
+
+function openAllergyModal(itemId) {
+  modal.style.display = 'block';
+  // Hide all allergy content divs
+  for(let content of allergyContents) {
+    content.style.display = 'none';
+  }
+  // Show the selected item's allergy content
+  document.getElementById(itemId).style.display = 'block';
+}
+
+// Close modal when clicking the X button
+closeBtn.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+});
+</script>
+
+</body>
+
+</html>

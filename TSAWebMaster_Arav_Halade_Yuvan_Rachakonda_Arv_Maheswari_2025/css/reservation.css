@@ -1,0 +1,226 @@
+/* Reservation Form Styles */
+.reservation-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.reservation-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.reservation-header img {
+    height: 60px;
+    margin-bottom: 25px;
+}
+
+.reservation-header h2 {
+    color: #286B4C;
+    margin-bottom: 15px;
+    font-size: 36px;
+}
+
+.reservation-header p {
+    color: #666;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#reservationForm {
+    position: relative;
+    z-index: 2;
+}
+
+#reservationForm .form-group {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+#reservationForm label {
+    color: #286B4C;
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+    font-size: 16px;
+    pointer-events: auto;
+}
+
+#reservationForm .form-control {
+    height: 50px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+#reservationForm .form-control:focus {
+    border-color: #286B4C;
+    box-shadow: 0 0 8px rgba(40, 107, 76, 0.2);
+}
+
+#reservationForm textarea.form-control {
+    height: auto;
+    min-height: 120px;
+    resize: vertical;
+    margin-bottom: 35px;
+}
+
+#reservationForm .input-group {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+#reservationForm .input-group-addon {
+    background-color: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-right: none;
+    pointer-events: auto;
+}
+
+#reservationForm .submit-btn {
+    background-color: #286B4C;
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    min-width: 200px;
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+}
+
+#reservationForm .submit-btn:hover {
+    background-color: #194e37;
+    transform: translateY(-2px);
+}
+
+/* Row Spacing */
+#reservationForm .row {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#reservationForm .row:last-child {
+    margin-bottom: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767px) {
+    .reservation-container {
+        padding: 25px;
+        margin: 15px;
+    }
+
+    .reservation-header {
+        margin-bottom: 35px;
+    }
+
+    .reservation-header img {
+        height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .reservation-header h2 {
+        font-size: 28px;
+    }
+
+    #reservationForm .form-group {
+        margin-bottom: 25px;
+    }
+
+    #reservationForm .row > div[class*='col-'] {
+        margin-bottom: 25px;
+    }
+
+    #reservationForm .row > div[class*='col-']:last-child {
+        margin-bottom: 0;
+    }
+
+    #reservationForm textarea.form-control {
+        margin-bottom: 25px;
+    }
+
+    #reservationForm .submit-btn {
+        width: 100%;
+        padding: 15px 20px;
+    }
+}
+
+/* Submission Notification */
+.submission-notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #286B4C;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    animation: slideIn 0.5s ease-out;
+}
+
+.submission-notification.show {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.checkmark::after {
+    content: '';
+    width: 6px;
+    height: 12px;
+    border: solid #286B4C;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-top: -2px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
