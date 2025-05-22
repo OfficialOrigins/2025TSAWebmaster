@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>VitaFlora | Jobs</title>
+  <title>Verdura | Appetizers</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -22,7 +22,7 @@
   <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet"> -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-  <link rel="shortcut icon" href="images/titlelogo.png">
+  <link rel="shortcut icon" href="images/Logo_for_Verdura_-removebg-preview.png">
 </head>
 
 <body>
@@ -193,6 +193,85 @@
     font-size: 60px;
     color: white;
     cursor: pointer;
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #286B4C;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.mobile-nav .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.mobile-nav a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile Dropdown Styles */
+.mobile-menu-dropdown {
+    position: relative;
+}
+
+.mobile-menu-dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-dropdown .fa-angle-down {
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-dropdown.active .fa-angle-down {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu-dropdown.active .mobile-dropdown-content {
+    max-height: 300px;
+}
+
+.mobile-dropdown-content a {
+    padding-left: 30px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Responsive Design */
@@ -478,14 +557,41 @@
 .fa-pepper-hot:before {
   content: "\f816";  /* This is the pepper icon code */
 }
+
+.reserve-button-container {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
+}
+
+.reserve-table-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    background-color: #286B4C;
+    border: 2px solid #286B4C;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.reserve-table-btn:hover {
+    background-color: transparent;
+    color: #286B4C;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(40, 107, 76, 0.2);
+}
   </style>
 </head>
 
 <body>
-  <!-- Add this right after the opening <body> tag -->
   <button class="mobile-menu-btn" onclick="openNav()">
     <i class="fa fa-bars"></i>
-                </button>
+  </button>
 
   <!-- Modern Header -->
   <header class="modern-header">
@@ -500,9 +606,9 @@
                     <a href="appetizers.html">Appetizers</a>
                     <a href="mains.html">Main/Entrees</a>
                     <a href="desserts.html">Desserts</a>
-            </div>
+                </div>
             </li>
-                </ul>
+        </ul>
     </nav>
 
     <!-- Center Logo -->
@@ -512,27 +618,27 @@
 
     <!-- Right Navigation -->
     <nav class="right-nav">
-      <ul class="modern-nav__links">
-          <li>
-              <a href="#">Community</a>
-              <div class="modern-dropdown-content">
-                  <a href="howtosupport.html">How to Support?</a>
-                  <a href="community.html">Community Outreach</a>
-                  <a href="donatenow.html">Donate Now</a>
-            </div>
-          </li>
-          <li>
-              <a href="#">Reserve</a>
-              <div class="modern-dropdown-content">
-                  <a href="reserve.html">Dine In</a>
-                  <a href="CarryOut.html">Order To-Go</a>
-        </div>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <ul class="modern-nav__links">
+            <li>
+                <a href="community.html">Community</a>
+            </li>
+            <li>
+                <a href="#">Reserve</a>
+                <div class="modern-dropdown-content">
+                    <a href="reserve.html">Dine In</a>
+                    <a href="CarryOut.html">Order To-Go</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Contact/Copyright</a>
+                <div class="modern-dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="copyright.html">Copyright</a>
+                </div>
+            </li>
+        </ul>
     </nav>
-</header>
-
+  </header>
 
   <!-- Add this right after the header -->
   <div id="mobileNav" class="mobile-nav">
@@ -540,22 +646,38 @@
     <div class="mobile-nav-content">
       <a href="index.html">Home</a>
       <a href="benefits.html">About</a>
-      <a href="appetizers.html">Appetizers</a>
-      <a href="mains.html">Main/Entrees</a>
-      <a href="desserts.html">Desserts</a>
-      <a href="howtosupport.html">How to Support?</a>
-      <a href="outreach.html">Community Outreach</a>
-      <a href="donate.html">Donate Now</a>
-      <a href="reserve.html">Reserve</a>
-      <a href="contact.html">Contact</a>
-            </div>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Menu <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="appetizers.html">Appetizers</a>
+          <a href="mains.html">Main/Entrees</a>
+          <a href="desserts.html">Desserts</a>
+        </div>
+      </div>
+      <a href="community.html">Community</a>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Reserve <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="reserve.html">Dine In</a>
+          <a href="CarryOut.html">Order To-Go</a>
+        </div>
+      </div>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Contact/Copyright <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="contact.html">Contact</a>
+          <a href="copyright.html">Copyright</a>
+        </div>
+      </div>
+    </div>
+  </div>
         </div>
 
   <!--Image Header-->
   <section class="page_header padding jobs_header">
     <div class="container">
       <div class="header_content text-center">
-        <h1 class="uppercase">Jobs</h1>
+        <h1 style="color:white" class="uppercase">Appetizers</h1>
       </div>
     </div>
   </section>
@@ -763,7 +885,9 @@
   <!--How to Apply Button-->
   <div class="row">
     <div class="col-md-12 text-center">
-      <a href="reserve.html"><button class="applybutton" style="height:auto">Reserve a table</button></a>
+      <div class="reserve-button-container">
+        <a href="reserve.html" class="reserve-table-btn">RESERVE A TABLE</a>
+      </div>
     </div>
   </div>
   <br>
@@ -778,10 +902,10 @@
           <div class="footer_panel content_space">
             <h4 class="heading_border heading_space">Contact Verdura</h4>
             <ul class="about_foot">
-              <li><i class="fa fa-home"></i>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</li>
-              <li><i class="fa fa-phone"></i>(813)-833-9852</li>
+              <li><i class="fa fa-home"></i>404 Kale Way, Suite 12B,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(123) 000-VEGN/li>
               <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
-          </ul>
+            </ul>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
@@ -797,49 +921,30 @@
           <div class="footer_panel content_space">
             <h4 class="heading_border heading_space">Quick Links</h4>
             <ul class="about_foot">
-            <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="benefits.html">About</a></li>
               <li><a href="appetizers.html">Menu</a></li>
               <li><a href="reserve.html">Reserve</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">Follow Us</h4>
-          <ul class="social">
-            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-          </ul>
         </div>
       </div>
     </div>
-    </div>
   </footer>
 
-  <!--Chatbot Section-->
-  <button class="chatbot-toggler">
-    <span class="material-symbols-rounded">mode_comment</span>
-    <span class="material-symbols-outlined">close</span>
-  </button>
-  <div class="chatbot">
-    <header>
-      <h2>Chat With Us</h2>
-      <span class="close-btn material-symbols-outlined">close</span>
-    </header>
-    <ul class="chatbox">
-      <li class="chat incoming">
-        <span class="material-symbols-outlined">smart_toy</span>
-        <p>Hi there!<br>How may I assist you today?</p>
-      </li>
-    </ul>
-    <div class="chat-input">
-      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-      <span id="send-btn" class="material-symbols-rounded">send</span>
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
+        </div>
+      </div>
     </div>
   </div>
+ 
+  
+ 
 
   <script src="js/jquery-2.2.3.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -1036,7 +1141,7 @@
                 <h3>Ingredients</h3>
                 <p>Organic sourdough bread, ripe avocados, our signature seed blend (hemp, chia, flax), microgreens, and cold-pressed olive oil.</p>
                 
-                <h3>VitaFlora Seasoning</h3>
+                <h3>Verdura Seasoning</h3>
                 <p>Pink Himalayan salt, black pepper, nutritional yeast, and our proprietary herb blend.</p>
                 
                 <div class="allergy-info">
@@ -1370,6 +1475,31 @@ closeBtn.addEventListener('click', function() {
 window.addEventListener('click', function(event) {
   if (event.target == modal) {
     modal.style.display = 'none';
+  }
+});
+
+// Mobile navigation functions
+function openNav() {
+  document.getElementById("mobileNav").style.width = "100%";
+  document.body.style.overflow = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("mobileNav").style.width = "0%";
+  document.body.style.overflow = "auto";
+}
+
+function toggleDropdown(element) {
+  const dropdown = element.parentElement;
+  dropdown.classList.toggle("active");
+}
+
+// Close menu on window resize
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 800) {
+    const nav = document.getElementById("mobileNav");
+    nav.style.width = "0";
+    document.body.classList.remove("nav-open");
   }
 });
 </script>

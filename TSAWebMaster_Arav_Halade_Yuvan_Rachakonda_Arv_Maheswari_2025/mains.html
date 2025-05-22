@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>VitaFlora | Jobs</title>
+  <title>Verdura | Main/Entrees</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -29,446 +29,551 @@
   <!--HEADER-->
   <style>
     /* Navigation specific styles */
-    /* Navigation specific styles */
-.modern-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5rem;
-    background-color: #286B4C;
-    min-height: 90px;
-}
+    .modern-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5rem;
+        background-color: #286B4C;
+        min-height: 90px;
+    }
 
-.modern-logo {
-    display: flex;
-    align-items: center;
-    padding: 8px 0;
-    padding-bottom: 35px;
-}
+    .modern-logo {
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+        padding-bottom: 35px;
+    }
 
-.modern-logo img {
-    height: 100px;
-    width: auto;
-}
+    .modern-logo img {
+        height: 100px;
+        width: auto;
+    }
 
-.left-nav, .right-nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.left-nav {
-    justify-content: flex-end;
-    padding-right: 100px;
-}
-
-.right-nav {
-    justify-content: flex-start;
-    padding-left: 100px;
-}
-
-.modern-nav__links {
-    display: flex;
-    gap: 4rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    align-items: center;
-}
-
-.modern-nav__links a {
-    font-family: 'Oswald', sans-serif !important;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    line-height: 90px;
-    display: block;
-}
-
-.modern-nav__links a:hover {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Dropdown Menu */
-.modern-nav__links li {
-    position: relative;
-}
-
-.modern-dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    padding: 12px 0;
-    z-index: 1000;
-    
-    /* Animation properties */
-    transform-origin: top center;
-    transform: scaleY(0);
-    opacity: 0;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.modern-nav__links li:hover .modern-dropdown-content {
-    transform: scaleY(1);
-    opacity: 1;
-}
-
-.modern-dropdown-content a {
-    font-family: 'Oswald', sans-serif !important;
-    color: #286B4C !important;
-    padding: 12px 25px;
-    display: block;
-    font-size: 16px;
-    text-align: left;
-    line-height: normal !important;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.modern-dropdown-content a:hover {
-    background: #286B4C;
-    color: white !important;
-}
-
-/* Triangle indicator */
-.modern-dropdown-content::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 30px;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid white;
-}
-
-/* Mobile Menu Styles */
-#mobile__menu {
-    display: none;
-}
-
-/* Mobile Overlay */
-.modern-overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1001;
-    top: 0;
-    left: 0;
-    background-color: #286B4C;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.modern-overlay__content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.modern-overlay__content a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 24px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    margin: 10px 0;
-}
-
-.modern-overlay__content a:hover {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.modern-overlay .modern-close {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 800px) {
     .left-nav, .right-nav {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .left-nav {
+        justify-content: flex-end;
+        padding-right: 100px;
+    }
+
+    .right-nav {
+        justify-content: flex-start;
+        padding-left: 100px;
+    }
+
+    .modern-nav__links {
+        display: flex;
+        gap: 4rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        align-items: center;
+    }
+
+    .modern-nav__links a {
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        line-height: 90px;
+        display: block;
+    }
+
+    .modern-nav__links a:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* Dropdown Menu */
+    .modern-nav__links li {
+        position: relative;
+    }
+
+    .modern-dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 220px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        padding: 12px 0;
+        z-index: 1000;
+        
+        /* Animation properties */
+        transform-origin: top center;
+        transform: scaleY(0);
+        opacity: 0;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .modern-nav__links li:hover .modern-dropdown-content {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    .modern-dropdown-content a {
+        font-family: 'Oswald', sans-serif !important;
+        color: #286B4C !important;
+        padding: 12px 25px;
+        display: block;
+        font-size: 16px;
+        text-align: left;
+        line-height: normal !important;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .modern-dropdown-content a:hover {
+        background: #286B4C;
+        color: white !important;
+    }
+
+    /* Triangle indicator */
+    .modern-dropdown-content::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        left: 30px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    /* Mobile Navigation Styles */
+    .mobile-nav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        background-color: #286B4C;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+
+    .mobile-nav .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 36px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .mobile-nav-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+    }
+
+    .mobile-nav a {
+        padding: 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-nav a:hover {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Mobile Dropdown Styles */
+    .mobile-menu-dropdown {
+        position: relative;
+    }
+
+    .mobile-menu-dropdown > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobile-menu-dropdown .fa-angle-down {
+        transition: transform 0.3s ease;
+    }
+
+    .mobile-menu-dropdown.active .fa-angle-down {
+        transform: rotate(180deg);
+    }
+
+    .mobile-dropdown-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu-dropdown.active .mobile-dropdown-content {
+        max-height: 300px;
+    }
+
+    .mobile-dropdown-content a {
+        padding-left: 30px;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Mobile Menu Styles */
+    #mobile__menu {
         display: none;
     }
-    
-    .modern-header {
-        justify-content: center;
-        padding: 0 2rem;
-    }
-    
-    .modern-logo img {
-        height: 70px;
+
+    /* Mobile Overlay */
+    .modern-overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        background-color: #286B4C;
+        overflow-x: hidden;
+        transition: 0.5s;
     }
 
-    #mobile__menu {
+    .modern-overlay__content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .modern-overlay__content a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 24px;
+        color: white;
         display: block;
+        transition: 0.3s;
+        margin: 10px 0;
     }
-}
 
-/* Mobile Menu Button */
-.mobile-menu-btn {
-    display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1002;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-}
+    .modern-overlay__content a:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
 
-@media screen and (max-width: 800px) {
+    .modern-overlay .modern-close {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 800px) {
+        .left-nav, .right-nav {
+            display: none;
+        }
+        
+        .modern-header {
+            justify-content: center;
+            padding: 0 2rem;
+        }
+        
+        .modern-logo img {
+            height: 70px;
+        }
+
+        #mobile__menu {
+            display: block;
+        }
+    }
+
+    /* Mobile Menu Button */
     .mobile-menu-btn {
-        display: block;
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1002;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
     }
-}
 
-/* Update the flair tag styling */
-.flair-tag {
-    display: none;  /* This will hide any flair tags */
-}
+    @media screen and (max-width: 800px) {
+        .mobile-menu-btn {
+            display: block;
+        }
+    }
 
-/* Update card position */
-.card {
-    position: relative;
-    margin-top: 20px;  /* Space for the flair tag */
-    z-index: 1;
-    background: white;
-    border-radius: 20px;
-    overflow: visible;  /* Changed from hidden to show flair tag */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-    padding: 15px;
-}
+    /* Update the flair tag styling */
+    .flair-tag {
+        display: none;  /* This will hide any flair tags */
+    }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
+    /* Update card position */
+    .card {
+        position: relative;
+        margin-top: 20px;  /* Space for the flair tag */
+        z-index: 1;
+        background: white;
+        border-radius: 20px;
+        overflow: visible;  /* Changed from hidden to show flair tag */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+        padding: 15px;
+    }
 
-.card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
 
-.card-content {
-    padding: 0 10px 20px 10px;
-    background: white;
-}
+    .card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
 
-.card-content h2 {
-    color: #286B4C;
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-family: 'Oswald', sans-serif;
-}
+    .card-content {
+        padding: 0 10px 20px 10px;
+        background: white;
+    }
 
-.card-content .description {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
+    .card-content h2 {
+        color: #286B4C;
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-family: 'Oswald', sans-serif;
+    }
 
-.card-content .details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
+    .card-content .description {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
 
-/* .card-content .price {
-    color: #286B4C;
-    font-size: 24px;
-    font-weight: 600;
-    font-family: 'Oswald', sans-serif;
-    text-align: right;
-    margin: 15px 0;
-} */
+    .card-content .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
 
-/* Modal Updates */
-.job-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    overflow-y: auto;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
+    /* .card-content .price {
+        color: #286B4C;
+        font-size: 24px;
+        font-weight: 600;
+        font-family: 'Oswald', sans-serif;
+        text-align: right;
+        margin: 15px 0;
+    } */
 
-.job-modal.show {
-    opacity: 1;
-}
+    /* Modal Updates */
+    .job-modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        overflow-y: auto;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
 
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 40px;
-    width: 90%;
-    max-width: 700px;
-    border-radius: 15px;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transform: translateY(-20px);
-    transition: transform 0.3s ease;
-}
+    .job-modal.show {
+        opacity: 1;
+    }
 
-.job-modal.show .modal-content {
-    transform: translateY(0);
-}
+    .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 40px;
+        width: 90%;
+        max-width: 700px;
+        border-radius: 15px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transform: translateY(-20px);
+        transition: transform 0.3s ease;
+    }
 
-/* Modal Styling */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  overflow-y: auto;
-}
+    .job-modal.show .modal-content {
+        transform: translateY(0);
+    }
 
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  padding: 30px;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 15px;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(40, 107, 76, 0.2);
-}
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      overflow-y: auto;
+    }
 
-.allergy-close {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #286B4C;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 30px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(40, 107, 76, 0.2);
+    }
 
-.allergy-close:hover {
-  color: white;
-  background: #286B4C;
-}
+    .allergy-close {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #286B4C;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
 
-.allergy-info-btn {
-  width: 100%;
-  background: #286B4C;
-  border: 2px solid #286B4C;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 25px;
-  margin-top: 15px;
-  cursor: pointer;
-  font-family: 'Oswald', sans-serif;
-  transition: all 0.3s ease;
-}
+    .allergy-close:hover {
+      color: white;
+      background: #286B4C;
+    }
 
-.allergy-info-btn:hover {
-  background: white;
-  color: #286B4C;
-}
+    .allergy-info-btn {
+      width: 100%;
+      background: #286B4C;
+      border: 2px solid #286B4C;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 25px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      transition: all 0.3s ease;
+    }
 
-.allergy-content {
-  display: none;
-}
+    .allergy-info-btn:hover {
+      background: white;
+      color: #286B4C;
+    }
 
-.allergy-section {
-  margin-bottom: 20px;
-}
+    .allergy-content {
+      display: none;
+    }
 
-.allergy-section h3 {
-  color: #286B4C;
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-family: 'Oswald', sans-serif;
-}
+    .allergy-section {
+      margin-bottom: 20px;
+    }
 
-.allergy-warning {
-  margin-top: 20px;
-  padding: 15px;
-  background: #fff3cd;
-  border-radius: 8px;
-  border: 1px solid #ffeeba;
-}
+    .allergy-section h3 {
+      color: #286B4C;
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-family: 'Oswald', sans-serif;
+    }
 
-.allergy-warning p {
-  color: #856404;
-  margin: 0;
-  font-size: 14px;
-}
+    .allergy-warning {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff3cd;
+      border-radius: 8px;
+      border: 1px solid #ffeeba;
+    }
 
-#modalTitle {
-  color: #286B4C;
-  margin-bottom: 25px;
-  font-family: 'Oswald', sans-serif;
-}
+    .allergy-warning p {
+      color: #856404;
+      margin: 0;
+      font-size: 14px;
+    }
 
-.spice-level {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 5px;
-}
+    #modalTitle {
+      color: #286B4C;
+      margin-bottom: 25px;
+      font-family: 'Oswald', sans-serif;
+    }
 
-.spice-level i {
-  color: #ddd;
-  font-size: 18px;
-}
+    .spice-level {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 5px;
+    }
 
-.spice-level i.active {
-  color: #e74c3c;
-}
+    .spice-level i {
+      color: #ddd;
+      font-size: 18px;
+    }
 
-.spice-text {
-  margin-left: 10px;
-  color: #666;
-  font-size: 14px;
-  font-style: italic;
-}
+    .spice-level i.active {
+      color: #e74c3c;
+    }
 
-/* Add Font Awesome pepper icon */
-.fa-pepper-hot:before {
-  content: "\f816";  /* This is the pepper icon code */
-}
+    .spice-text {
+      margin-left: 10px;
+      color: #666;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    /* Add Font Awesome pepper icon */
+    .fa-pepper-hot:before {
+      content: "\f816";  /* This is the pepper icon code */
+    }
+
+    .reserve-button-container {
+        text-align: center;
+        padding: 40px 0;
+        margin-top: 20px;
+    }
+
+    .reserve-table-btn {
+        display: inline-block;
+        padding: 18px 40px;
+        font-size: 24px;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        color: white;
+        background-color: #286B4C;
+        border: 2px solid #286B4C;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        letter-spacing: 1px;
+    }
+
+    .reserve-table-btn:hover {
+        background-color: transparent;
+        color: #286B4C;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(40, 107, 76, 0.2);
+    }
   </style>
 </head>
 
 <body>
-  <!-- Add this right after the opening <body> tag -->
   <button class="mobile-menu-btn" onclick="openNav()">
     <i class="fa fa-bars"></i>
   </button>
@@ -500,12 +605,7 @@
     <nav class="right-nav">
         <ul class="modern-nav__links">
             <li>
-                <a href="#">Community</a>
-                <div class="modern-dropdown-content">
-                    <a href="howtosupport.html">How to Support?</a>
-                    <a href="community.html">Community Outreach</a>
-                    <a href="donatenow.html">Donate Now</a>
-                </div>
+                <a href="community.html">Community</a>
             </li>
             <li>
                 <a href="#">Reserve</a>
@@ -514,7 +614,13 @@
                     <a href="CarryOut.html">Order To-Go</a>
                 </div>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="#">Contact/Copyright</a>
+                <div class="modern-dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="copyright.html">Copyright</a>
+                </div>
+            </li>
         </ul>
     </nav>
   </header>
@@ -525,14 +631,29 @@
     <div class="mobile-nav-content">
       <a href="index.html">Home</a>
       <a href="benefits.html">About</a>
-      <a href="appetizers.html">Appetizers</a>
-      <a href="mains.html">Main/Entrees</a>
-      <a href="desserts.html">Desserts</a>
-      <a href="howtosupport.html">How to Support?</a>
-      <a href="outreach.html">Community Outreach</a>
-      <a href="donate.html">Donate Now</a>
-      <a href="reserve.html">Reserve</a>
-      <a href="contact.html">Contact</a>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Menu <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="appetizers.html">Appetizers</a>
+          <a href="mains.html">Main/Entrees</a>
+          <a href="desserts.html">Desserts</a>
+        </div>
+      </div>
+      <a href="community.html">Community</a>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Reserve <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="reserve.html">Dine In</a>
+          <a href="CarryOut.html">Order To-Go</a>
+        </div>
+      </div>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Contact/Copyright <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="contact.html">Contact</a>
+          <a href="copyright.html">Copyright</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -540,7 +661,7 @@
   <section class="page_header padding jobs_header">
     <div class="container">
       <div class="header_content text-center">
-        <h1 class="uppercase">Jobs</h1>
+        <h1 style="color:white" class="uppercase">Mains/Entrees</h1>
       </div>
     </div>
   </section>
@@ -727,10 +848,8 @@
   </section>
 
   <!--How to Apply Button-->
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <a href="reserve.html"><button class="applybutton" style="height:auto">Reserve a table</button></a>
-    </div>
+  <div class="reserve-button-container">
+    <a href="reserve.html" class="reserve-table-btn">RESERVE A TABLE</a>
   </div>
   <br>
   <br>
@@ -744,8 +863,8 @@
           <div class="footer_panel content_space">
             <h4 class="heading_border heading_space">Contact Verdura</h4>
             <ul class="about_foot">
-              <li><i class="fa fa-home"></i>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</li>
-              <li><i class="fa fa-phone"></i>(813)-833-9852</li>
+              <li><i class="fa fa-home"></i>404 Kale Way, Suite 12B,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(123) 000-VEGN</li>
               <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
             </ul>
           </div>
@@ -771,51 +890,23 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">Follow Us</h4>
-            <ul class="social">
-              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            </ul>
-          </div>
-        </div>
       </div>
     </div>
   </footer>
+  
+    
 
   <div class="copyright">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
-          <p>Copyright © 2024 VitaFlora. All rights reserved.</p>
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
         </div>
       </div>
     </div>
   </div>
+ 
 
-  <!--Chatbot Section-->
-  <button class="chatbot-toggler">
-    <span class="material-symbols-rounded">mode_comment</span>
-    <span class="material-symbols-outlined">close</span>
-  </button>
-  <div class="chatbot">
-    <header>
-      <h2>Chat With Us</h2>
-      <span class="close-btn material-symbols-outlined">close</span>
-    </header>
-    <ul class="chatbox">
-      <li class="chat incoming">
-        <span class="material-symbols-outlined">smart_toy</span>
-        <p>Hi there!<br>How may I assist you today?</p>
-      </li>
-    </ul>
-    <div class="chat-input">
-      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-      <span id="send-btn" class="material-symbols-rounded">send</span>
-    </div>
-  </div>
 
   <script src="js/jquery-2.2.3.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -1034,7 +1125,7 @@
                 <h3>Ingredients</h3>
                 <p>Organic sourdough bread, ripe avocados, our signature seed blend (hemp, chia, flax), microgreens, and cold-pressed olive oil.</p>
                 
-                <h3>VitaFlora Seasoning</h3>
+                <h3>Verdura Seasoning</h3>
                 <p>Pink Himalayan salt, black pepper, nutritional yeast, and our proprietary herb blend.</p>
                 
                 <div class="allergy-info">
@@ -1339,8 +1430,8 @@
       </div>
       <div class="allergy-warning">
         <p>Gluten-free bread available upon request. All vegetables locally sourced when possible.</p>
-  </div>
-</div>
+      </div>
+    </div>
 
     <!-- Golden Falafel Bowl Info -->
     <div id="goldenfalafel" class="allergy-content">
@@ -1620,6 +1711,31 @@ closeBtn.addEventListener('click', function() {
 window.addEventListener('click', function(event) {
   if (event.target == modal) {
     modal.style.display = 'none';
+  }
+});
+
+// Mobile navigation functions
+function openNav() {
+  document.getElementById("mobileNav").style.width = "100%";
+  document.body.style.overflow = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("mobileNav").style.width = "0%";
+  document.body.style.overflow = "auto";
+}
+
+function toggleDropdown(element) {
+  const dropdown = element.parentElement;
+  dropdown.classList.toggle("active");
+}
+
+// Close menu on window resize
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 800) {
+    const nav = document.getElementById("mobileNav");
+    nav.style.width = "0";
+    document.body.classList.remove("nav-open");
   }
 });
 </script>

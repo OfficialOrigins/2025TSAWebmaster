@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>VitaFlora | Copyright</title>
+  <title>Verdura | Copyright</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -32,62 +32,390 @@
 
   <!--HEADER-->
      <!--HEADER-->
-     <header>
-      <nav class="navbar navbar-default navbar-sticky bootsnav" style="background-color: #286B4C; padding: 10px;">
-          <div class="container">
+     <style>
+
+    
+
+      .modern-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0 5rem;
+       background-color: #286B4C;
+       min-height: 90px;
+   }
+   
+   .modern-logo {
+       display: flex;
+       align-items: center;
+       padding: 8px 0;
+       padding-bottom: 35px;
+   }
+   
+   .modern-logo img {
+       height: 100px;
+       width: auto;
+   }
+   
+   .left-nav, .right-nav {
+       flex: 1;
+       display: flex;
+       align-items: center;
+   }
+   
+   .left-nav {
+       justify-content: flex-end;
+       padding-right: 100px;
+   }
+   
+   .right-nav {
+       justify-content: flex-start;
+       padding-left: 100px;
+   }
+   
+   .modern-nav__links {
+       display: flex;
+       gap: 4rem;
+       margin: 0;
+       padding: 0;
+       list-style: none;
+       align-items: center;
+   }
+   
+   .modern-nav__links a {
+       font-family: 'Oswald', sans-serif !important;
+       font-size: 18px;
+       font-weight: 500;
+       color: white;
+       text-decoration: none;
+       transition: color 0.3s ease;
+       line-height: 90px;
+       display: block;
+   }
+   
+   .modern-nav__links a:hover {
+       color: rgba(255, 255, 255, 0.8);
+   }
+   
+   /* Dropdown Menu */
+   .modern-nav__links li {
+       position: relative;
+   }
+   
+   .modern-dropdown-content {
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background: white;
+       min-width: 220px;
+       border-radius: 8px;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+       padding: 12px 0;
+       z-index: 1000;
+       
+       /* Animation properties */
+       transform-origin: top center;
+       transform: scaleY(0);
+       opacity: 0;
+       transition: transform 0.2s ease, opacity 0.2s ease;
+   }
+   
+   .modern-nav__links li:hover .modern-dropdown-content {
+       transform: scaleY(1);
+       opacity: 1;
+   }
+   
+   .modern-dropdown-content a {
+       font-family: 'Oswald', sans-serif !important;
+       color: #286B4C !important;
+       padding: 12px 25px;
+       display: block;
+       font-size: 16px;
+       text-align: left;
+       line-height: normal !important;
+       transition: background-color 0.2s ease, color 0.2s ease;
+   }
+   
+   .modern-dropdown-content a:hover {
+       background: #286B4C;
+       color: white !important;
+   }
+   
+   /* Triangle indicator */
+   .modern-dropdown-content::before {
+       content: '';
+       position: absolute;
+       top: -8px;
+       left: 30px;
+       border-left: 8px solid transparent;
+       border-right: 8px solid transparent;
+       border-bottom: 8px solid white;
+   }
+   
+   /* Mobile Menu Styles */
+   #mobile__menu {
+       display: none;
+   }
+   
+   /* Mobile Overlay */
+   .modern-overlay {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1001;
+       top: 0;
+       left: 0;
+       background-color: #286B4C;
+       overflow-x: hidden;
+       transition: 0.5s;
+   }
+   
+   .modern-overlay__content {
+       position: relative;
+       top: 25%;
+       width: 100%;
+       text-align: center;
+       margin-top: 30px;
+   }
+   
+   .modern-overlay__content a {
+       padding: 8px;
+       text-decoration: none;
+       font-size: 24px;
+       color: white;
+       display: block;
+       transition: 0.3s;
+       margin: 10px 0;
+   }
+   
+   .modern-overlay__content a:hover {
+       color: rgba(255, 255, 255, 0.8);
+   }
+   
+   .modern-overlay .modern-close {
+       position: absolute;
+       top: 20px;
+       right: 45px;
+       font-size: 60px;
+       color: white;
+       cursor: pointer;
+   }
+   
+   /* Responsive Design */
+   @media screen and (max-width: 800px) {
+       .left-nav, .right-nav {
+           display: none;
+       }
+       
+       .modern-header {
+           justify-content: center;
+           padding: 0 2rem;
+       }
+       
+       .modern-logo img {
+           height: 70px;
+       }
+   
+       #mobile__menu {
+           display: block;
+       }
+   }
+   
+   /* Mobile Menu Button */
+   .mobile-menu-btn {
+       display: none;
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       z-index: 1002;
+       background: none;
+       border: none;
+       color: white;
+       font-size: 24px;
+       cursor: pointer;
+   }
+   
+   @media screen and (max-width: 800px) {
+       .mobile-menu-btn {
+           display: block;
+       }
+   }
+
+   /* Mobile Navigation Styles */
+   .mobile-nav {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1001;
+       top: 0;
+       left: 0;
+       background-color: #286B4C;
+       overflow-x: hidden;
+       transition: 0.3s;
+       padding-top: 60px;
+   }
+
+   .mobile-nav .close-btn {
+       position: absolute;
+       top: 15px;
+       right: 25px;
+       font-size: 36px;
+       color: white;
+       cursor: pointer;
+   }
+
+   .mobile-nav-content {
+       display: flex;
+       flex-direction: column;
+       padding: 0 15px;
+   }
+
+   .mobile-nav a {
+       padding: 15px;
+       text-decoration: none;
+       font-size: 18px;
+       color: white;
+       display: block;
+       transition: 0.3s;
+       text-align: left;
+       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   }
+
+   .mobile-nav a:hover {
+       color: rgba(255, 255, 255, 0.7);
+   }
+   
+   /* Mobile Dropdown Styles */
+   .mobile-menu-dropdown {
+       position: relative;
+   }
+
+   .mobile-menu-dropdown > a {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .mobile-menu-dropdown .fa-angle-down {
+       transition: transform 0.3s ease;
+   }
+
+   .mobile-menu-dropdown.active .fa-angle-down {
+       transform: rotate(180deg);
+   }
+
+   .mobile-dropdown-content {
+       max-height: 0;
+       overflow: hidden;
+       transition: max-height 0.3s ease;
+   }
+
+   .mobile-menu-dropdown.active .mobile-dropdown-content {
+       max-height: 300px;
+   }
+
+   .mobile-dropdown-content a {
+       padding-left: 30px !important;
+       font-size: 16px;
+       background-color: rgba(255, 255, 255, 0.05);
+   }
+
+   /* Responsive Design */
+     </style>
+   </head>
+   
+   <body>
+    <button class="mobile-menu-btn" onclick="openNav()">
+      <i class="fa fa-bars"></i>
+    </button>
   
-              <!-- Start Header Navigation -->
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" style="background-color: white; border: none;">
-                      <i class="fa fa-bars" style="color: black;"></i>
-                  </button>
-                  <a class="navbar-brand" href="index.html">
-                      <img src="images/navlogo.png" class="logo" alt="" style="height: 50px;">
-                  </a>
-              </div>
-              <!-- End Header Navigation -->
-  
-              <div class="collapse navbar-collapse" id="navbar-menu">
-                  <br>
-                  <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
-                      <li><a href="index.html" style="color: white; padding: 10px 15px; text-decoration: none;">Home</a></li>
-                      <li><a href="benefits.html" style="color: white; padding: 10px 15px; text-decoration: none;">About</a></li>
-  
-                      <!-- Dropdown Menu -->
-                      <li class="dropdown">
-                          <a href="jobs.html" class="dropdown-toggle" data-toggle="dropdown" style="color: white; padding: 10px 15px; text-decoration: none;">Menu <b class="caret"></b></a>
-                          <ul class="dropdown-menu" style="background-color: white; border-radius: 5px; border: 1px solid #ccc; padding: 10px; min-width: 150px;">
-                              <li><a href="appetizers.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Appetizers</a></li>
-                              <li><a href="mains.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Main/Entrees</a></li>
-                              <li><a href="desserts.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Desserts</a></li>
-                          </ul>
-                      </li>
-  
-                      <!-- Community Impact Dropdown -->
-                      <li class="dropdown">
-                          <a href="howtosupport.html" class="dropdown-toggle" data-toggle="dropdown" style="color: white; padding: 10px 15px; text-decoration: none;">Community Impact <b class="caret"></b></a>
-                          <ul class="dropdown-menu" style="background-color: white; border-radius: 5px; border: 1px solid #ccc; padding: 10px; min-width: 150px;">
-                              <li><a href="howtosupport.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">How to Support?</a></li>
-                              <li><a href="outreach.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Community Outreach</a></li>
-                              <li><a href="donate.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Donate Now</a></li>
-                          </ul>
-                      </li>
-  
-                      <li><a href="contact.html" style="color: white; padding: 10px 15px; text-decoration: none;">Contact Us</a></li>
-                  </ul>
-              </div>
-          </div>
+    <!-- Modern Header -->
+    <header class="modern-header">
+      <!-- Left Navigation -->
+      <nav class="left-nav">
+          <ul class="modern-nav__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li>
+                  <a href="#">Menu</a>
+                  <div class="modern-dropdown-content">
+                      <a href="appetizers.html">Appetizers</a>
+                      <a href="mains.html">Main/Entrees</a>
+                      <a href="desserts.html">Desserts</a>
+                  </div>
+              </li>
+          </ul>
       </nav>
-  </header>
+  
+      <!-- Center Logo -->
+      <a class="modern-logo" href="index.html">
+          <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+      </a>
+  
+      <!-- Right Navigation -->
+      <nav class="right-nav">
+          <ul class="modern-nav__links">
+              <li>
+                  <a href="community.html">Community</a>
+              </li>
+              <li>
+                  <a href="#">Reserve</a>
+                  <div class="modern-dropdown-content">
+                      <a href="reserve.html">Dine In</a>
+                      <a href="CarryOut.html">Order To-Go</a>
+                  </div>
+              </li>
+              <li>
+                  <a href="#">Contact/Copyright</a>
+                  <div class="modern-dropdown-content">
+                      <a href="contact.html">Contact</a>
+                      <a href="copyright.html">Copyright</a>
+                  </div>
+              </li>
+          </ul>
+      </nav>
+    </header>
+  
+    <!-- Add this right after the header -->
+    <div id="mobileNav" class="mobile-nav">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+      <div class="mobile-nav-content">
+        <a href="index.html">Home</a>
+        <a href="benefits.html">About</a>
+        <div class="mobile-menu-dropdown">
+          <a href="#" onclick="toggleDropdown(this)">Menu <i class="fa fa-angle-down"></i></a>
+          <div class="mobile-dropdown-content">
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Main/Entrees</a>
+            <a href="desserts.html">Desserts</a>
+          </div>
+        </div>
+        <a href="community.html">Community</a>
+        <div class="mobile-menu-dropdown">
+          <a href="#" onclick="toggleDropdown(this)">Reserve <i class="fa fa-angle-down"></i></a>
+          <div class="mobile-dropdown-content">
+            <a href="reserve.html">Dine In</a>
+            <a href="CarryOut.html">Order To-Go</a>
+          </div>
+        </div>
+        <div class="mobile-menu-dropdown">
+          <a href="#" onclick="toggleDropdown(this)">Contact/Copyright <i class="fa fa-angle-down"></i></a>
+          <div class="mobile-dropdown-content">
+            <a href="contact.html">Contact</a>
+            <a href="copyright.html">Copyright</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
   <!--Image Header-->
-  <section class="page_header padding">
+  <section class="page_header padding copyright_header">
     <div class="container">
       <div class="header_content padding">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h1 class="uppercase"> Copyright</h1>
+            <h1 style="color:white" class="uppercase"> Copyright</h1>
           </div>
         </div>
       </div>
@@ -102,7 +430,7 @@
           <ul class="breadcrumb">
             <li><a href="index.html">Home</a>
             </li>
-            <li class="active">Copyright</li>
+            <li style="color: white;">Reference</li>
           </ul>
         </div>
       </div>
@@ -115,23 +443,98 @@
   <div class="jobsdescp">
    <h3>Our Privacy Policy</h3>
    <br>
-   <p>This Privacy Policy document contains types of information that is collected and recorded by VitaFlora and how we use it. If you have additional questions or require more information about our privacy policy, please do not hesitate to contact us. This privacy policy applies only to our online activities and is valid for visitors to our website with regards to the information that they share and/or collect at VitaFlora. </p>  
-   <p>This policy is not applicable to any information collected offline or via channels other than this website. By using our website, you hereby consent to our Privacy Policy and agree to its terms. The personal information that you are asked to provide and the reasons why you are asked to provide it will be made clear to you at the point when we ask you to provide your personal information </p>
+   <p>This Privacy Policy document is part of a student project created for the Technology Student Association (TSA) Webmaster competition. As this is a demonstration website, no real user data is collected or stored. Any forms or interactive elements are for display purposes only and do not process actual information.</p>
+   <p>While we've implemented this privacy policy to demonstrate best practices in web development, please note that Verdura is a fictional restaurant created solely for educational purposes.</p>
    <br>
    <br>
    
 
+   <h3>TSA Competition Disclaimer</h3>
+   <br>
+   <p>This website was created for the Technology Student Association (TSA) Webmaster competition and is not associated with a real restaurant or business. Verdura is a fictional establishment designed to showcase web development and design skills for educational purposes only.</p>
+   <br>
+   <br>
+
+   <h3>Image Licensing</h3>
+   <br>
+   <p>Images on this website are sourced from:</p>
+   <ul style="color: #286B4C;">
+    <li>Adobe Stock - Used under Standard License, which permits usage for websites and digital media</li>
+    <li>Unsplash - Used under the Unsplash License, which grants free usage rights for all purposes, including commercial use, without requiring permission or attribution (though attribution is appreciated)</li>
+   </ul>
+   <br>
+   <br>
+
+   <h3>Project Information</h3>
+   <br>
+   <p>This project was developed by students for the 2025 TSA Webmaster competition. All content, including the restaurant concept, menu items, and business model, is fictional and created solely for demonstration purposes.</p>
+   <br>
+   <p>While the partnerships mentioned (such as Feeding Tampa Bay and FWAF) are real organizations, any implied associations are purely fictional and part of the competition scenario.</p>
+   <br>
+   <br>
+
    <h3>Sources</h3>
    <br>
-   <p>Elements of all sorts were obtained from EnvatoElements.com. All photos and videos were obtained from AdobeStock.com and modified using Adobe Photoshop and PixelBin. AI API key was obtained from OpenAI. To view sources of content please click on any of the following URL links below!</p>
+   <p>Elements and resources were obtained from:</p>
    <ul style="color: #286B4C;">
-    <a href="https://www.environmentalscience.org/career/botanist" target="_blank"><li>https://www.environmentalscience.org/career/botanis</li></a>
-    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649468/" target="_blank"><li>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2649468/</li></a>
-    <a href="https://www.sohma.org/herbs/what-is-an-herbal-pharmacist/" target="_blank"><li>https://www.sohma.org/herbs/what-is-an-herbal-pharmacist/</li></a>
-    <a href="https://newcropsorganics.ces.ncsu.edu/herb/fresh-herb-production-and-marketing/" target="_blank"><li>https://newcropsorganics.ces.ncsu.edu/herb/fresh-herb-production-and-marketing/</li></a>
-    <a href="https://www.indeed.com/hire/job-description/finance-manager" target="_blank"><li>https://www.indeed.com/hire/job-description/finance-manager</li></a>
-    <a href="https://www.coursera.org/in/articles/what-does-a-data-analyst-do-a-career-guide" target="_blank"><li>https://www.coursera.org/in/articles/what-does-a-data-analyst-do-a-career-guide</li></a>
+       <a href="https://stock.adobe.com" target="_blank"><li>Adobe Stock - Commercial image licensing</li></a>
+       <a href="https://unsplash.com" target="_blank"><li>Unsplash - Free-to-use image platform</li></a>
    </ul>
+
+   <h3>Technical Framework & Dependencies</h3>
+   <br>
+   <p>This website was developed using the following frameworks, libraries, and plugins. Note that while some of these were included in the initial setup, not all features were implemented in the final design:</p>
+   <br>
+   <ul style="color: #286B4C;">
+       <li><strong>Core Frameworks:</strong>
+           <ul>
+               <li>Bootstrap 4.0 - Frontend framework for responsive design</li>
+               <li>jQuery 2.2.3 - JavaScript library for DOM manipulation</li>
+           </ul>
+       </li>
+       <br>
+       <li><strong>Animation & Visual Effects:</strong>
+           <ul>
+               <li>Animate.min.css - For element animations</li>
+               <li>Owl Carousel - Responsive carousel slider</li>
+               <li>Revolution Slider - Advanced slider plugin (included but not implemented)</li>
+               <li>jQuery Parallax - For parallax scrolling effects</li>
+           </ul>
+       </li>
+       <br>
+       <li><strong>UI Components:</strong>
+           <ul>
+               <li>Font Awesome - Icon library and toolkit</li>
+               <li>Bootsnav - Bootstrap navigation menu</li>
+               <li>Cubeportfolio - Portfolio and grid layouts (included but not implemented)</li>
+               <li>Fancybox - Lightbox gallery implementation (included but not implemented)</li>
+           </ul>
+       </li>
+       <br>
+       <li><strong>Additional Features:</strong>
+           <ul>
+               <li>Google Maps API - For location services (included but not implemented)</li>
+               <li>Final Countdown - For timer implementations (included but not implemented)</li>
+               <li>Kinetic.js - For canvas animations (included but not implemented)</li>
+           </ul>
+       </li>
+   </ul>
+   <br>
+   <p>All frameworks and plugins are included in our documentation, though some features were not utilized in the final website. The implemented tools were chosen specifically to create an efficient, responsive, and user-friendly web experience while also following the TSA guidelines.</p>
+
+   <h3>Framework Implementation Statement</h3>
+   <br>
+   <p>This website uses Bootstrap as a framework system. We affirm that all templates and themes used with this framework were custom-built by our team, with no pre-built templates or themes used.</p>
+   <br>
+
+   <h3>Required Documentation</h3>
+   <br>
+   <ul style="color: #286B4C;">
+       <li><a href="CopyrightTSA_AH_YR_AM_2025_Webmaster.pdf">Student Copyright Checklist (PDF)</a></li>
+       <li><a href="Copy of Verdura Documentation.pdf">Verdura Stock Photos Documentation (PDF)</a></li>
+       <li><a href="WorklogWebmaster2025.pdf">Work Log (PDF)</a></li>
+   </ul>
+   <br>
   </div>
   </div>
   </div>
@@ -142,45 +545,40 @@
 
 
 
-   <!--Footer-->
-   <footer class="padding_top bottom_half">
+      <!--Footer-->
+  <!--Footer-->
+  <footer class="padding_top bottom_half">
     <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
           <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">contact VitaFlora</h4>
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
             <ul class="about_foot">
-              <li><i class="fa fa-home"></i>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</li>
-              <li><i class="fa fa-phone"></i>(813)-833-9852</li>
-              <li><i class="fa fa-envelope-o"></i>vitaflora.careers@gmail.com</li>
-              <li>
-              </li>
-            </ul>
-          </div>
-        </div> 
-        <div class="col-md-3 col-sm-6">
-          <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">Pages</h4>
-            <ul class="about_foot">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="benefits.html">Benefits</a></li>
-              <li><a href="jobs.html">Jobs</a></li>
-              <li><a href="howtoapply.html">How To Apply</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li></li>
+              <li><i class="fa fa-home"></i>404 Kale Way, Suite 12B,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(123) 000-VEGN</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
             </ul>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">Follow Us</h4>
-            <ul class="social">
-              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
+            <ul class="about_foot">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -188,37 +586,20 @@
     </div>
   </footer>
   
+    
+
   <div class="copyright">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 text-center">
-          <p style="color:white"><a style="color: white" href="copyright.html"> &copy; 2024 VitaFlora. All Right Reserved.</a></p>
+        <div class="col-md-12 text-center">
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
         </div>
       </div>
     </div>
   </div>
   
- <!--AI-->
- <button class="chatbot-toggler">
-  <span class="material-symbols-rounded">mode_comment</span>
-  <span class="material-symbols-outlined">close</span>
-</button>
-<div class="chatbot">
-  <header>
-    <h2 style="font-size: 30px;">Chat With Us</h2>
-    <span class="close-btn material-symbols-outlined">close</span>
-  </header>
-  <ul class="chatbox">
-    <li class="chat incoming">
-      <span class="material-symbols-outlined">smart_toy</span>
-      <p style="font-size: 18px;">Hi there <br>How may I assist you today?</p>
-    </li>
-  </ul>
-  <div class="chat-input">
-    <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-    <span id="send-btn" class="material-symbols-rounded">send</span>
-  </div>
-</div>
+  
+ 
 
   <script src="js/jquery-2.2.3.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOBKD6V47-g_3opmidcmFapb3kSNAR70U"></script>
@@ -242,6 +623,35 @@
   <script src="js/functions.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/ai.js"></script>
+
+  <!-- Mobile navigation functions -->
+  <script>
+  function openNav() {
+    document.getElementById("mobileNav").style.width = "100%";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    document.getElementById("mobileNav").style.width = "0%";
+    document.body.style.overflow = "auto";
+  }
+
+  function toggleDropdown(element) {
+    const dropdown = element.parentElement;
+    dropdown.classList.toggle("active");
+  }
+
+  // Close menu on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 800) {
+      const nav = document.getElementById("mobileNav");
+      if (nav) {
+        nav.style.width = "0";
+        document.body.classList.remove("nav-open");
+      }
+    }
+  });
+  </script>
 
 </body>
 

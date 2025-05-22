@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>VitaFlora | Contact Us</title>
+  <title>Verdura | Contact Us</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -21,8 +21,42 @@
 
   <link rel="shortcut icon" href="images/titlelogo.png">
 
+  <style>
+    /* Mobile Dropdown Styles */
+    .mobile-menu-dropdown {
+      position: relative;
+    }
 
+    .mobile-menu-dropdown > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .mobile-menu-dropdown .fa-angle-down {
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu-dropdown.active .fa-angle-down {
+      transform: rotate(180deg);
+    }
+
+    .mobile-dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu-dropdown.active .mobile-dropdown-content {
+      max-height: 300px;
+    }
+
+    .mobile-dropdown-content a {
+      padding-left: 30px !important;
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  </style>
 
 </head>
 
@@ -32,53 +66,302 @@
 
   <!--HEADER-->
      <!--HEADER-->
-     <header>
-      <nav class="navbar navbar-default navbar-sticky bootsnav" style="background-color: #286B4C; padding: 10px;">
-          <div class="container">
+     <style>
+
+    
+
+      .modern-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0 5rem;
+       background-color: #286B4C;
+       min-height: 90px;
+   }
+   
+   .modern-logo {
+       display: flex;
+       align-items: center;
+       padding: 8px 0;
+       padding-bottom: 35px;
+   }
+   
+   .modern-logo img {
+       height: 100px;
+       width: auto;
+   }
+   
+   .left-nav, .right-nav {
+       flex: 1;
+       display: flex;
+       align-items: center;
+   }
+   
+   .left-nav {
+       justify-content: flex-end;
+       padding-right: 100px;
+   }
+   
+   .right-nav {
+       justify-content: flex-start;
+       padding-left: 100px;
+   }
+   
+   .modern-nav__links {
+       display: flex;
+       gap: 4rem;
+       margin: 0;
+       padding: 0;
+       list-style: none;
+       align-items: center;
+   }
+   
+   .modern-nav__links a {
+       font-family: 'Oswald', sans-serif !important;
+       font-size: 18px;
+       font-weight: 500;
+       color: white;
+       text-decoration: none;
+       transition: color 0.3s ease;
+       line-height: 90px;
+       display: block;
+   }
+   
+   .modern-nav__links a:hover {
+       color: rgba(255, 255, 255, 0.8);
+   }
+   
+   /* Dropdown Menu */
+   .modern-nav__links li {
+       position: relative;
+   }
+   
+   .modern-dropdown-content {
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background: white;
+       min-width: 220px;
+       border-radius: 8px;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+       padding: 12px 0;
+       z-index: 1000;
+       
+       /* Animation properties */
+       transform-origin: top center;
+       transform: scaleY(0);
+       opacity: 0;
+       transition: transform 0.2s ease, opacity 0.2s ease;
+   }
+   
+   .modern-nav__links li:hover .modern-dropdown-content {
+       transform: scaleY(1);
+       opacity: 1;
+   }
+   
+   .modern-dropdown-content a {
+       font-family: 'Oswald', sans-serif !important;
+       color: #286B4C !important;
+       padding: 12px 25px;
+       display: block;
+       font-size: 16px;
+       text-align: left;
+       line-height: normal !important;
+       transition: background-color 0.2s ease, color 0.2s ease;
+   }
+   
+   .modern-dropdown-content a:hover {
+       background: #286B4C;
+       color: white !important;
+   }
+   
+   /* Triangle indicator */
+   .modern-dropdown-content::before {
+       content: '';
+       position: absolute;
+       top: -8px;
+       left: 30px;
+       border-left: 8px solid transparent;
+       border-right: 8px solid transparent;
+       border-bottom: 8px solid white;
+   }
+   
+   /* Mobile Menu Styles */
+   #mobile__menu {
+       display: none;
+   }
+   
+   /* Mobile Overlay */
+   .modern-overlay {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1001;
+       top: 0;
+       left: 0;
+       background-color: #286B4C;
+       overflow-x: hidden;
+       transition: 0.5s;
+   }
+   
+   .modern-overlay__content {
+       position: relative;
+       top: 25%;
+       width: 100%;
+       text-align: center;
+       margin-top: 30px;
+   }
+   
+   .modern-overlay__content a {
+       padding: 8px;
+       text-decoration: none;
+       font-size: 24px;
+       color: white;
+       display: block;
+       transition: 0.3s;
+       margin: 10px 0;
+   }
+   
+   .modern-overlay__content a:hover {
+       color: rgba(255, 255, 255, 0.8);
+   }
+   
+   .modern-overlay .modern-close {
+       position: absolute;
+       top: 20px;
+       right: 45px;
+       font-size: 60px;
+       color: white;
+       cursor: pointer;
+   }
+   
+   /* Responsive Design */
+   @media screen and (max-width: 800px) {
+       .left-nav, .right-nav {
+           display: none;
+       }
+       
+       .modern-header {
+           justify-content: center;
+           padding: 0 2rem;
+       }
+       
+       .modern-logo img {
+           height: 70px;
+       }
+   
+       #mobile__menu {
+           display: block;
+       }
+   }
+   
+   /* Mobile Menu Button */
+   .mobile-menu-btn {
+       display: none;
+       position: fixed;
+       top: 20px;
+       right: 20px;
+       z-index: 1002;
+       background: none;
+       border: none;
+       color: white;
+       font-size: 24px;
+       cursor: pointer;
+   }
+   
+   @media screen and (max-width: 800px) {
+       .mobile-menu-btn {
+           display: block;
+       }
+   }
+     </style>
+   </head>
+   
+   <body>
+     
+    <button class="mobile-menu-btn" onclick="openNav()">
+      <i class="fa fa-bars"></i>
+    </button>
   
-              <!-- Start Header Navigation -->
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu" style="background-color: white; border: none;">
-                      <i class="fa fa-bars" style="color: black;"></i>
-                  </button>
-                  <a class="navbar-brand" href="index.html">
-                      <img src="images/navlogo.png" class="logo" alt="" style="height: 50px;">
-                  </a>
-              </div>
-              <!-- End Header Navigation -->
-  
-              <div class="collapse navbar-collapse" id="navbar-menu">
-                  <br>
-                  <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
-                      <li><a href="index.html" style="color: white; padding: 10px 15px; text-decoration: none;">Home</a></li>
-                      <li><a href="benefits.html" style="color: white; padding: 10px 15px; text-decoration: none;">About</a></li>
-  
-                      <!-- Dropdown Menu -->
-                      <li class="dropdown">
-                          <a href="jobs.html" class="dropdown-toggle" data-toggle="dropdown" style="color: white; padding: 10px 15px; text-decoration: none;">Menu <b class="caret"></b></a>
-                          <ul class="dropdown-menu" style="background-color: white; border-radius: 5px; border: 1px solid #ccc; padding: 10px; min-width: 150px;">
-                              <li><a href="appetizers.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Appetizers</a></li>
-                              <li><a href="mains.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Main/Entrees</a></li>
-                              <li><a href="desserts.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Desserts</a></li>
-                          </ul>
-                      </li>
-  
-                      <!-- Community Impact Dropdown -->
-                      <li class="dropdown">
-                          <a href="howtosupport.html" class="dropdown-toggle" data-toggle="dropdown" style="color: white; padding: 10px 15px; text-decoration: none;">Community Impact <b class="caret"></b></a>
-                          <ul class="dropdown-menu" style="background-color: white; border-radius: 5px; border: 1px solid #ccc; padding: 10px; min-width: 150px;">
-                              <li><a href="howtosupport.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">How to Support?</a></li>
-                              <li><a href="outreach.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Community Outreach</a></li>
-                              <li><a href="donate.html" style="color: #286B4C; display: block; padding: 8px; text-decoration: none;" onmouseover="this.style.backgroundColor='#286B4C'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='#286B4C';">Donate Now</a></li>
-                          </ul>
-                      </li>
-  
-                      <li><a href="contact.html" style="color: white; padding: 10px 15px; text-decoration: none;">Contact Us</a></li>
-                  </ul>
-              </div>
-          </div>
+    <!-- Modern Header -->
+    <header class="modern-header">
+      <!-- Left Navigation -->
+      <nav class="left-nav">
+          <ul class="modern-nav__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li>
+                  <a href="#">Menu</a>
+                  <div class="modern-dropdown-content">
+                      <a href="appetizers.html">Appetizers</a>
+                      <a href="mains.html">Main/Entrees</a>
+                      <a href="desserts.html">Desserts</a>
+                  </div>
+              </li>
+          </ul>
       </nav>
-  </header>
+  
+      <!-- Center Logo -->
+      <a class="modern-logo" href="index.html">
+          <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+      </a>
+  
+      <!-- Right Navigation -->
+      <nav class="right-nav">
+          <ul class="modern-nav__links">
+              <li>
+                  <a href="community.html">Community</a>
+              </li>
+              <li>
+                  <a href="#">Reserve</a>
+                  <div class="modern-dropdown-content">
+                      <a href="reserve.html">Dine In</a>
+                      <a href="CarryOut.html">Order To-Go</a>
+                  </div>
+              </li>
+              <li>
+                  <a href="#">Contact/Copyright</a>
+                  <div class="modern-dropdown-content">
+                      <a href="contact.html">Contact</a>
+                      <a href="copyright.html">Copyright</a>
+                  </div>
+              </li>
+          </ul>
+      </nav>
+    </header>
+  
+    <!-- Add this right after the header -->
+    <div id="mobileNav" class="mobile-nav">
+      <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+      <div class="mobile-nav-content">
+        <a href="index.html">Home</a>
+        <a href="benefits.html">About</a>
+        <div class="mobile-menu-dropdown">
+          <a href="#" onclick="toggleDropdown(this)">Menu <i class="fa fa-angle-down"></i></a>
+          <div class="mobile-dropdown-content">
+            <a href="appetizers.html">Appetizers</a>
+            <a href="mains.html">Main/Entrees</a>
+            <a href="desserts.html">Desserts</a>
+          </div>
+        </div>
+        <a href="community.html">Community</a>
+        <div class="mobile-menu-dropdown">
+          <a href="#" onclick="toggleDropdown(this)">Reserve <i class="fa fa-angle-down"></i></a>
+          <div class="mobile-dropdown-content">
+            <a href="reserve.html">Dine In</a>
+            <a href="CarryOut.html">Order To-Go</a>
+          </div>
+        </div>
+        <div class="mobile-menu-dropdown">
+          <a href="#" onclick="toggleDropdown(this)">Contact/Copyright <i class="fa fa-angle-down"></i></a>
+          <div class="mobile-dropdown-content">
+            <a href="contact.html">Contact</a>
+            <a href="copyright.html">Copyright</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
 
 
   <!--Image Header-->
@@ -87,7 +370,7 @@
       <div class="header_content padding">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h1 class="uppercase"> Contact us</h1>
+            <h1 style="color:white" class="uppercase"> Contact us</h1>
           </div>
         </div>
       </div>
@@ -156,7 +439,7 @@
                         <i class="fa fa-map-marker"></i>
                         <div>
                             <h5>Our Address</h5>
-                            <p>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</p>
+                            <p>404 Kale Way, Suite 12B,<br> Tampa, FL 33647, United States</p>
                         </div>
                     </div>
                     
@@ -164,7 +447,7 @@
                         <i class="fa fa-phone"></i>
                         <div>
                             <h5>Phone Number</h5>
-                            <p>(813)-833-9852</p>
+                            <p>(123) 000-VEGN</p>
                         </div>
                     </div>
                     
@@ -172,7 +455,7 @@
                         <i class="fa fa-envelope-o"></i>
                         <div>
                             <h5>Email Address</h5>
-                            <p>vitaflora.careers@gmail.com</p>
+                            <p>verdura.info@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -194,32 +477,40 @@
 
 
   <!--Footer-->
+  <!--Footer-->
+  <!--Footer-->
   <footer class="padding_top bottom_half">
     <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
           <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">contact VitaFlora</h4>
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
             <ul class="about_foot">
-              <li><i class="fa fa-home"></i>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</li>
-              <li><i class="fa fa-phone"></i>(813)-833-9852</li>
-              <li><i class="fa fa-envelope-o"></i>vitaflora.careers@gmail.com</li>
-              <li>
-              </li>
+              <li><i class="fa fa-home"></i>404 Kale Way, Suite 12B<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(123) 000-VEGN</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
             </ul>
           </div>
-        </div> 
+        </div>
         <div class="col-md-3 col-sm-6">
           <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">Pages</h4>
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
             <ul class="about_foot">
               <li><a href="index.html">Home</a></li>
-              <li><a href="benefits.html">Benefits</a></li>
-              <li><a href="jobs.html">Jobs</a></li>
-              <li><a href="howtoapply.html">How To Apply</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
               <li><a href="contact.html">Contact Us</a></li>
-              <li></li>
             </ul>
           </div>
         </div>
@@ -227,11 +518,9 @@
           <div class="footer_panel content_space">
             <h4 class="heading_border heading_space">Follow Us</h4>
             <ul class="social">
-              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -239,37 +528,22 @@
     </div>
   </footer>
   
+    
+
   <div class="copyright">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 text-center">
-          <p style="color:white"><a style="color: white" href="copyright.html"> &copy; 2024 VitaFlora. All Right Reserved.</a></p>
+        <div class="col-md-12 text-center">
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
         </div>
       </div>
     </div>
   </div>
   
+   
+  
  <!--AI-->
- <button class="chatbot-toggler">
-  <span class="material-symbols-rounded">mode_comment</span>
-  <span class="material-symbols-outlined">close</span>
-</button>
-<div class="chatbot">
-  <header>
-    <h2 style="font-size: 30px;">Chat With Us</h2>
-    <span class="close-btn material-symbols-outlined">close</span>
-  </header>
-  <ul class="chatbox">
-    <li class="chat incoming">
-      <span class="material-symbols-outlined">smart_toy</span>
-      <p style="font-size: 18px;">Hi there <br>How may I assist you today?</p>
-    </li>
-  </ul>
-  <div class="chat-input">
-    <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-    <span id="send-btn" class="material-symbols-rounded">send</span>
-  </div>
-</div>
+ 
 
 
   <script src="js/jquery-2.2.3.js"></script>
@@ -294,6 +568,19 @@
   <script src="js/functions.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/ai.js"></script>
+
+  <!-- Mobile navigation functions -->
+  <script>
+  function openNav() {
+    document.getElementById("mobileNav").style.width = "100%";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    document.getElementById("mobileNav").style.width = "0%";
+    document.body.style.overflow = "auto";
+  }
+  </script>
 
   <script>
   const contactForm = document.getElementById('contactForm');
@@ -346,6 +633,24 @@
   // Additional cleanup on any input
   document.getElementById('name').addEventListener('input', function(e) {
       this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+  });
+  </script>
+
+  <script>
+  function toggleDropdown(element) {
+    const dropdown = element.parentElement;
+    dropdown.classList.toggle("active");
+  }
+
+  // Close menu on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 800) {
+      const nav = document.getElementById("mobileNav");
+      if (nav) {
+        nav.style.width = "0";
+        document.body.classList.remove("nav-open");
+      }
+    }
   });
   </script>
 

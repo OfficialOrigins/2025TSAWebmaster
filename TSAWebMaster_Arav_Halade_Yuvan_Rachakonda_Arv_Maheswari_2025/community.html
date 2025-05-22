@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>VitaFlora | How To Apply</title>
+  <title>Verdura | Community</title>
 
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
@@ -21,8 +21,42 @@
 
   <link rel="shortcut icon" href="images/titlelogo.png">
 
+  <style>
+    /* Mobile Dropdown Styles */
+    .mobile-menu-dropdown {
+      position: relative;
+    }
 
- 
+    .mobile-menu-dropdown > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-menu-dropdown .fa-angle-down {
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu-dropdown.active .fa-angle-down {
+      transform: rotate(180deg);
+    }
+
+    .mobile-dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .mobile-menu-dropdown.active .mobile-dropdown-content {
+      max-height: 300px;
+    }
+
+    .mobile-dropdown-content a {
+      padding-left: 30px !important;
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  </style>
 
 </head>
 
@@ -36,277 +70,310 @@
 
 
   <!--Image Header-->
-  <section class="page_header padding howtoapply_header">
+  <section class="page_header padding about_header">
     <div class="container">
-      <div class="header_content padding">
+      <div class="">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h1 class="uppercase"> How To Apply</h1>
+            <h1 style="color: white;" class="uppercase">Community</h1>
           </div>
         </div>
-      </div> <style>
-        /* Navigation specific styles */
-        /* Navigation specific styles */
-    .modern-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 5rem;
-        background-color: #286B4C;
-        min-height: 90px;
-    }
+      </div> 
+      
+      <style>
+
     
-    .modern-logo {
-        display: flex;
-        align-items: center;
-        padding: 8px 0;
-        padding-bottom: 35px;
-    }
-    
-    .modern-logo img {
-        height: 100px;
-        width: auto;
-    }
-    
-    .left-nav, .right-nav {
-        flex: 1;
-        display: flex;
-        align-items: center;
-    }
-    
-    .left-nav {
-        justify-content: flex-end;
-        padding-right: 100px;
-    }
-    
-    .right-nav {
-        justify-content: flex-start;
-        padding-left: 100px;
-    }
-    
-    .modern-nav__links {
-        display: flex;
-        gap: 4rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        align-items: center;
-    }
-    
-    .modern-nav__links a {
-        font-family: 'Oswald', sans-serif !important;
-        font-size: 18px;
-        font-weight: 500;
-        color: white;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        line-height: 90px;
-        display: block;
-    }
-    
-    .modern-nav__links a:hover {
-        color: rgba(255, 255, 255, 0.8);
-    }
-    
-    /* Dropdown Menu */
-    .modern-nav__links li {
-        position: relative;
-    }
-    
-    .modern-dropdown-content {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: white;
-        min-width: 220px;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        padding: 12px 0;
-        z-index: 1000;
-        
-        /* Animation properties */
-        transform-origin: top center;
-        transform: scaleY(0);
-        opacity: 0;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    
-    .modern-nav__links li:hover .modern-dropdown-content {
-        transform: scaleY(1);
-        opacity: 1;
-    }
-    
-    .modern-dropdown-content a {
-        font-family: 'Oswald', sans-serif !important;
-        color: #286B4C !important;
-        padding: 12px 25px;
-        display: block;
-        font-size: 16px;
-        text-align: left;
-        line-height: normal !important;
-        transition: background-color 0.2s ease, color 0.2s ease;
-    }
-    
-    .modern-dropdown-content a:hover {
-        background: #286B4C;
-        color: white !important;
-    }
-    
-    /* Triangle indicator */
-    .modern-dropdown-content::before {
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: 30px;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid white;
-    }
-    
-    /* Mobile Menu Styles */
-    #mobile__menu {
-        display: none;
-    }
-    
-    /* Mobile Overlay */
-    .modern-overlay {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1001;
-        top: 0;
-        left: 0;
-        background-color: #286B4C;
-        overflow-x: hidden;
-        transition: 0.5s;
-    }
-    
-    .modern-overlay__content {
-        position: relative;
-        top: 25%;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
-    
-    .modern-overlay__content a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 24px;
-        color: white;
-        display: block;
-        transition: 0.3s;
-        margin: 10px 0;
-    }
-    
-    .modern-overlay__content a:hover {
-        color: rgba(255, 255, 255, 0.8);
-    }
-    
-    .modern-overlay .modern-close {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 60px;
-        color: white;
-        cursor: pointer;
-    }
-    
-    /* Responsive Design */
-    @media screen and (max-width: 800px) {
-        .left-nav, .right-nav {
-            display: none;
-        }
-        
+
         .modern-header {
-            justify-content: center;
-            padding: 0 2rem;
-        }
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 0 5rem;
+         background-color: #286B4C;
+         min-height: 90px;
+     }
+     
+     .modern-logo {
+         display: flex;
+         align-items: center;
+         padding: 8px 0;
+         padding-bottom: 35px;
+     }
+     
+     .modern-logo img {
+         height: 100px;
+         width: auto;
+     }
+     
+     .left-nav, .right-nav {
+         flex: 1;
+         display: flex;
+         align-items: center;
+     }
+     
+     .left-nav {
+         justify-content: flex-end;
+         padding-right: 100px;
+     }
+     
+     .right-nav {
+         justify-content: flex-start;
+         padding-left: 100px;
+     }
+     
+     .modern-nav__links {
+         display: flex;
+         gap: 4rem;
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         align-items: center;
+     }
+     
+     .modern-nav__links a {
+         font-family: 'Oswald', sans-serif !important;
+         font-size: 18px;
+         font-weight: 500;
+         color: white;
+         text-decoration: none;
+         transition: color 0.3s ease;
+         line-height: 90px;
+         display: block;
+     }
+     
+     .modern-nav__links a:hover {
+         color: rgba(255, 255, 255, 0.8);
+     }
+     
+     /* Dropdown Menu */
+     .modern-nav__links li {
+         position: relative;
+     }
+     
+     .modern-dropdown-content {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         background: white;
+         min-width: 220px;
+         border-radius: 8px;
+         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+         padding: 12px 0;
+         z-index: 1000;
+         
+         /* Animation properties */
+         transform-origin: top center;
+         transform: scaleY(0);
+         opacity: 0;
+         transition: transform 0.2s ease, opacity 0.2s ease;
+     }
+     
+     .modern-nav__links li:hover .modern-dropdown-content {
+         transform: scaleY(1);
+         opacity: 1;
+     }
+     
+     .modern-dropdown-content a {
+         font-family: 'Oswald', sans-serif !important;
+         color: #286B4C !important;
+         padding: 12px 25px;
+         display: block;
+         font-size: 16px;
+         text-align: left;
+         line-height: normal !important;
+         transition: background-color 0.2s ease, color 0.2s ease;
+     }
+     
+     .modern-dropdown-content a:hover {
+         background: #286B4C;
+         color: white !important;
+     }
+     
+     /* Triangle indicator */
+     .modern-dropdown-content::before {
+         content: '';
+         position: absolute;
+         top: -8px;
+         left: 30px;
+         border-left: 8px solid transparent;
+         border-right: 8px solid transparent;
+         border-bottom: 8px solid white;
+     }
+     
+     /* Mobile Menu Styles */
+     #mobile__menu {
+         display: none;
+     }
+     
+     /* Mobile Overlay */
+     .modern-overlay {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         z-index: 1001;
+         top: 0;
+         left: 0;
+         background-color: #286B4C;
+         overflow-x: hidden;
+         transition: 0.5s;
+     }
+     
+     .modern-overlay__content {
+         position: relative;
+         top: 25%;
+         width: 100%;
+         text-align: center;
+         margin-top: 30px;
+     }
+     
+     .modern-overlay__content a {
+         padding: 8px;
+         text-decoration: none;
+         font-size: 24px;
+         color: white;
+         display: block;
+         transition: 0.3s;
+         margin: 10px 0;
+     }
+     
+     .modern-overlay__content a:hover {
+         color: rgba(255, 255, 255, 0.8);
+     }
+     
+     .modern-overlay .modern-close {
+         position: absolute;
+         top: 20px;
+         right: 45px;
+         font-size: 60px;
+         color: white;
+         cursor: pointer;
+     }
+     
+     /* Responsive Design */
+     @media screen and (max-width: 800px) {
+         .left-nav, .right-nav {
+             display: none;
+         }
+         
+         .modern-header {
+             justify-content: center;
+             padding: 0 2rem;
+         }
+         
+         .modern-logo img {
+             height: 70px;
+         }
+     
+         #mobile__menu {
+             display: block;
+         }
+     }
+     
+     /* Mobile Menu Button */
+     .mobile-menu-btn {
+         display: none;
+         position: fixed;
+         top: 20px;
+         right: 20px;
+         z-index: 1002;
+         background: none;
+         border: none;
+         color: white;
+         font-size: 24px;
+         cursor: pointer;
+     }
+     
+     @media screen and (max-width: 800px) {
+         .mobile-menu-btn {
+             display: block;
+         }
+     }
+       </style>
+     </head>
+     
+     <body>
+        <button class="mobile-menu-btn" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+          </button>
         
-        .modern-logo img {
-            height: 70px;
-        }
-    
-        #mobile__menu {
-            display: block;
-        }
-    }
-    
-    /* Mobile Menu Button */
-    .mobile-menu-btn {
-        display: none;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1002;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-    
-    @media screen and (max-width: 800px) {
-        .mobile-menu-btn {
-            display: block;
-        }
-    }
-    
-    /* Update the flair tag styling */
-      </style>
-    </head>
-    
-    <body>
-      <!-- Add this right after the opening <body> tag -->
-      <button class="mobile-menu-btn" onclick="openNav()">
-        <i class="fa fa-bars"></i>
-      </button>
-    
-      <!-- Modern Header -->
-      <header class="modern-header">
-        <!-- Left Navigation -->
-        <nav class="left-nav">
-            <ul class="modern-nav__links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="benefits.html">About</a></li>
-                <li>
-                    <a href="#">Menu</a>
-                    <div class="modern-dropdown-content">
-                        <a href="appetizers.html">Appetizers</a>
-                        <a href="mains.html">Main/Entrees</a>
-                        <a href="desserts.html">Desserts</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    
-        <!-- Center Logo -->
-        <a class="modern-logo" href="index.html">
-            <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
-        </a>
-    
-        <!-- Right Navigation -->
-        <nav class="right-nav">
-            <ul class="modern-nav__links">
-                <li>
-                    <a href="#">Community</a>
-                    <div class="modern-dropdown-content">
-                        <a href="howtosupport.html">How to Support?</a>
-                        <a href="community.html">Community Outreach</a>
-                        <a href="donatenow.html">Donate Now</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">Reserve</a>
-                    <div class="modern-dropdown-content">
-                        <a href="reserve.html">Dine In</a>
-                        <a href="CarryOut.html">Order To-Go</a>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-      </header>
+          <!-- Modern Header -->
+          <header class="modern-header">
+            <!-- Left Navigation -->
+            <nav class="left-nav">
+                <ul class="modern-nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="benefits.html">About</a></li>
+                    <li>
+                        <a href="#">Menu</a>
+                        <div class="modern-dropdown-content">
+                            <a href="appetizers.html">Appetizers</a>
+                            <a href="mains.html">Main/Entrees</a>
+                            <a href="desserts.html">Desserts</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        
+            <!-- Center Logo -->
+            <a class="modern-logo" href="index.html">
+                <img src="images/Logo_for_Verdura_-removebg-preview.png" alt="Verdura Logo">
+            </a>
+        
+            <!-- Right Navigation -->
+            <nav class="right-nav">
+                <ul class="modern-nav__links">
+                    <li>
+                        <a href="community.html">Community</a>
+                    </li>
+                    <li>
+                        <a href="#">Reserve</a>
+                        <div class="modern-dropdown-content">
+                            <a href="reserve.html">Dine In</a>
+                            <a href="CarryOut.html">Order To-Go</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Contact/Copyright</a>
+                        <div class="modern-dropdown-content">
+                            <a href="contact.html">Contact</a>
+                            <a href="copyright.html">Copyright</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+          </header>
+        
+          <!-- Mobile Navigation -->
+          <div id="mobileNav" class="mobile-nav">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+            <div class="mobile-nav-content">
+              <a href="index.html">Home</a>
+              <a href="benefits.html">About</a>
+              <div class="mobile-menu-dropdown">
+                <a href="#" onclick="toggleDropdown(this)">Menu <i class="fa fa-angle-down"></i></a>
+                <div class="mobile-dropdown-content">
+                  <a href="appetizers.html">Appetizers</a>
+                  <a href="mains.html">Main/Entrees</a>
+                  <a href="desserts.html">Desserts</a>
+                </div>
+              </div>
+              <a href="community.html">Community</a>
+              <div class="mobile-menu-dropdown">
+                <a href="#" onclick="toggleDropdown(this)">Reserve <i class="fa fa-angle-down"></i></a>
+                <div class="mobile-dropdown-content">
+                  <a href="reserve.html">Dine In</a>
+                  <a href="CarryOut.html">Order To-Go</a>
+                </div>
+              </div>
+              <div class="mobile-menu-dropdown">
+                <a href="#" onclick="toggleDropdown(this)">Contact/Copyright <i class="fa fa-angle-down"></i></a>
+                <div class="mobile-dropdown-content">
+                  <a href="contact.html">Contact</a>
+                  <a href="copyright.html">Copyright</a>
+                </div>
+              </div>
+            </div>
+          </div>
     
     </div>
   </section>
@@ -332,7 +399,7 @@
  <section class="purpose-section">
     <div class="container">
         <h2>Our Purpose</h2>
-        <p>At VitaFlora, we are dedicated to minimizing our environmental impact and advancing sustainability in every area of our operations. The following actions will be taken by us in the following year to aid in achieving our goal.</p>
+        <p>At Verdura, we are dedicated to minimizing our environmental impact and advancing sustainability in every area of our operations. The following actions will be taken by us in the following year to aid in achieving our goal.</p>
     </div>
 </section>
 
@@ -390,10 +457,17 @@
      <div class="content-container">
          <div class="shaded-content">
              <h2>Our Goals</h2>
-             <p>At VitaFlora, we believe in sustainable practices that protect our environment. Through innovative farming techniques and responsible sourcing, we're working to create a greener future for all.</p>
+             <p>At Verdura, we believe in sustainable practices that protect our environment. Through innovative farming techniques and responsible sourcing, we're working to create a greener future for all.</p>
+             <!-- <div class="initiative-tags">
+                 <span class="tag">Agroecology</span>
+                 <span class="tag">Worker Justice</span>
+                 <span class="tag">Food Sovereignty</span>
+                 <span class="tag">Health & Environmental Justice</span>
+                 <span class="tag">Climate Justice</span>
+             </div> -->
+             <p class="partnership-text">For every dish served at Verdura, we donate a portion of the revenue to support FWAF's initiatives.</p>
              <div class="button-group">
-                 <a href="#" class="btn-standard">Learn More</a>
-                 <a href="#" class="btn-standard light">Get Involved</a>
+                 <a href="https://floridafarmworkers.org/" target="_blank" class="btn-standard">LEARN MORE ABOUT FWAF</a>
              </div>
          </div>
      </div>
@@ -405,9 +479,9 @@
         <div class="quote-box">
             <i class="fa fa-quote-left quote-icon"></i>
             <blockquote>
-                "Protecting our environment is not just our responsibility; it's our legacy. Every small action counts towards creating a sustainable future for generations to come."
+                "Every meal served is a step towards a more sustainable and equitable community."
             </blockquote>
-            <p class="quote-author">- VitaFlora Team</p>
+            <p class="quote-author">- Verdura Team</p>
         </div>
     </div>
 </section>
@@ -417,11 +491,17 @@
     <div class="parallax-bg ocean"></div>
     <div class="content-container right">
         <div class="shaded-content">
-            <h2>Vitality Oceans</h2>
-            <p>We just don't focus on land, we focus on our beloved oceans. With every purchase of our Sea Sage natural soap bar, we donate to Florida Ocean Alliance, an organization rejuvenating our sea life and much more.</p>
+            <h2>Nourishing Communities</h2>
+            <p>We just don't focus on sustainability, we focus on our beloved community. Through our zero-waste initiative, we partner with Feeding Tampa Bay to ensure surplus food reaches those in need, making every meal count twice.</p>
+            <!-- <div class="initiative-tags">
+                <span class="tag">Zero Waste</span>
+                <span class="tag">Food Security</span>
+                <span class="tag">Community Support</span>
+                <span class="tag">Local Impact</span>
+            </div> -->
+            <p class="partnership-text">All surplus food from Verdura is carefully packaged and donated to support local families through Feeding Tampa Bay.</p>
             <div class="button-group">
-                <a href="#" class="btn-standard">Try our Sea Sage</a>
-                <a href="#" class="btn-standard light">Learn More</a>
+                <a href="https://feedingtampabay.org/" target="_blank" class="btn-standard">LEARN MORE ABOUT FEEDING TAMPA BAY</a>
             </div>
         </div>
     </div>
@@ -450,13 +530,13 @@
 }
 
 .parallax-bg.forest {
-    background-image: url('images/joel-vodell-8Ogfqvw15Rg-unsplash.jpg');
+    background-image: url('images/AdobeStock_530598240.jpeg');
     /* Fallback color in case image doesn't load */
     background-color: #286B4C;
 }
 
 .parallax-bg.ocean {
-    background-image: url('images/adele-payman-2oYMwuFgnTg-unsplash.jpg');
+    background-image: url('images/AdobeStock_624898750.jpeg');
     /* Fallback color in case image doesn't load */
     background-color: #4A7862;
 }
@@ -702,48 +782,132 @@
 }
 </style>
 
+<!-- <div class="partnership-box">
+    <h2>Community Support</h2>
+    <p class="partnership-text">For every dish served at Verdura, we donate a portion of the revenue to support FWAF's initiatives in:</p>
+    
+    <div class="initiative-tags">
+        <span class="tag">Agroecology</span>
+        <span class="tag">Worker Justice</span>
+        <span class="tag">Food Sovereignty</span>
+        <span class="tag">Health & Environmental Justice</span>
+        <span class="tag">Climate Justice</span>
+    </div>
 
+    <p class="partnership-footer">Together, we're working to create a more equitable and sustainable food system in Florida.</p>
+    
+    <a href="https://floridafarmworkers.org/" target="_blank" class="btn-learn">LEARN MORE ABOUT FWAF</a>
+</div> -->
 
+<style>
+.partnership-box {
+    background: rgb(241, 229, 208);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.partnership-box h2 {
+    color: #286B4C;
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.partnership-text {
+    color: #286B4C;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.initiative-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.tag {
+    background: #286B4C;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.partnership-footer {
+    color: #286B4C;
+    font-style: italic;
+    margin: 25px 0;
+}
+
+.btn-learn {
+    display: inline-block;
+    background: #286B4C;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.3s ease;
+    border: 2px solid #286B4C;
+}
+
+.btn-learn:hover {
+    background: transparent;
+    color: #286B4C;
+}
+
+@media (max-width: 768px) {
+    .partnership-box {
+        margin: 20px;
+        padding: 30px;
+    }
+    
+    .initiative-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
 
    <!--Footer-->
-   <footer class="padding_top bottom_half">
+   <!--Footer-->
+  <footer class="padding_top bottom_half">
     <a href="#." class="go-top text-center"><i class="fa fa-angle-double-up"></i></a>
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-6">
           <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">contact VitaFlora</h4>
+            <h4 class="heading_border heading_space">Contact Verdura</h4>
             <ul class="about_foot">
-              <li><i class="fa fa-home"></i>11010 Tahiti Isle Ln,<br> Tampa, FL 33647, United States</li>
-              <li><i class="fa fa-phone"></i>(813)-833-9852</li>
-              <li><i class="fa fa-envelope-o"></i>vitaflora.careers@gmail.com</li>
-              <li>
-              </li>
-            </ul>
-          </div>
-        </div> 
-        <div class="col-md-3 col-sm-6">
-          <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">Pages</h4>
-            <ul class="about_foot">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="benefits.html">Benefits</a></li>
-              <li><a href="jobs.html">Jobs</a></li>
-              <li><a href="howtoapply.html">How To Apply</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-              <li></li>
+              <li><i class="fa fa-home"></i>404 Kale Way, Suite 12B,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(123) 000-VEGN</li>
+              <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
             </ul>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="footer_panel content_space">
-            <h4 class="heading_border heading_space">Follow Us</h4>
-            <ul class="social">
-              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+            <h4 class="heading_border heading_space">Hours</h4>
+            <ul class="about_foot">
+              <li><i class="fa fa-clock-o"></i>Monday - Sunday</li>
+              <li class="hours-indent">12:00 PM - 10:30 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="footer_panel content_space">
+            <h4 class="heading_border heading_space">Quick Links</h4>
+            <ul class="about_foot">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="benefits.html">About</a></li>
+              <li><a href="appetizers.html">Menu</a></li>
+              <li><a href="reserve.html">Reserve</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
         </div>
@@ -751,37 +915,19 @@
     </div>
   </footer>
   
+    
+
   <div class="copyright">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 text-center">
-          <p style="color:white"><a style="color: white" href="copyright.html"> &copy; 2024 VitaFlora. All Right Reserved.</a></p>
+        <div class="col-md-12 text-center">
+          <p><a href="copyright.html" style="color: white;">Copyright © 2025 Verdura. All rights reserved.</a></p>
         </div>
       </div>
     </div>
   </div>
   
- <!--AI-->
- <button class="chatbot-toggler">
-  <span class="material-symbols-rounded">mode_comment</span>
-  <span class="material-symbols-outlined">close</span>
-</button>
-<div class="chatbot">
-  <header>
-    <h2 style="font-size: 30px;">Chat With Us</h2>
-    <span class="close-btn material-symbols-outlined">close</span>
-  </header>
-  <ul class="chatbox">
-    <li class="chat incoming">
-      <span class="material-symbols-outlined">smart_toy</span>
-      <p style="font-size: 18px;">Hi there <br>How may I assist you today?</p>
-    </li>
-  </ul>
-  <div class="chat-input">
-    <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-    <span id="send-btn" class="material-symbols-rounded">send</span>
-  </div>
-</div>
+ 
 
   <script src="js/jquery-2.2.3.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOBKD6V47-g_3opmidcmFapb3kSNAR70U"></script>
@@ -805,6 +951,37 @@
   <script src="js/functions.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/ai.js"></script>
+
+  <!-- Mobile navigation functions -->
+  <script>
+  function openNav() {
+    document.getElementById("mobileNav").style.width = "100%";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeNav() {
+    document.getElementById("mobileNav").style.width = "0%";
+    document.body.style.overflow = "auto";
+  }
+  </script>
+
+  <script>
+  function toggleDropdown(element) {
+    const dropdown = element.parentElement;
+    dropdown.classList.toggle("active");
+  }
+
+  // Close menu on window resize
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 800) {
+      const nav = document.getElementById("mobileNav");
+      if (nav) {
+        nav.style.width = "0";
+        document.body.classList.remove("nav-open");
+      }
+    }
+  });
+  </script>
 
 </body>
 
