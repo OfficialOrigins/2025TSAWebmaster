@@ -195,6 +195,85 @@
     cursor: pointer;
 }
 
+/* Mobile Navigation Styles */
+.mobile-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #286B4C;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.mobile-nav .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.mobile-nav a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile Dropdown Styles */
+.mobile-menu-dropdown {
+    position: relative;
+}
+
+.mobile-menu-dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-dropdown .fa-angle-down {
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-dropdown.active .fa-angle-down {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu-dropdown.active .mobile-dropdown-content {
+    max-height: 300px;
+}
+
+.mobile-dropdown-content a {
+    padding-left: 30px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
 /* Responsive Design */
 @media screen and (max-width: 800px) {
     .left-nav, .right-nav {
@@ -510,10 +589,9 @@
 </head>
 
 <body>
-  <!-- Add this right after the opening <body> tag -->
   <button class="mobile-menu-btn" onclick="openNav()">
     <i class="fa fa-bars"></i>
-                </button>
+  </button>
 
   <!-- Modern Header -->
   <header class="modern-header">
@@ -528,9 +606,9 @@
                     <a href="appetizers.html">Appetizers</a>
                     <a href="mains.html">Main/Entrees</a>
                     <a href="desserts.html">Desserts</a>
-            </div>
+                </div>
             </li>
-                </ul>
+        </ul>
     </nav>
 
     <!-- Center Logo -->
@@ -540,22 +618,27 @@
 
     <!-- Right Navigation -->
     <nav class="right-nav">
-      <ul class="modern-nav__links">
-          <li>
-              <a href="community.html">Community</a>
-          </li>
-          <li>
-              <a href="#">Reserve</a>
-              <div class="modern-dropdown-content">
-                  <a href="reserve.html">Dine In</a>
-                  <a href="CarryOut.html">Order To-Go</a>
-        </div>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <ul class="modern-nav__links">
+            <li>
+                <a href="community.html">Community</a>
+            </li>
+            <li>
+                <a href="#">Reserve</a>
+                <div class="modern-dropdown-content">
+                    <a href="reserve.html">Dine In</a>
+                    <a href="CarryOut.html">Order To-Go</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Contact/Copyright</a>
+                <div class="modern-dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="copyright.html">Copyright</a>
+                </div>
+            </li>
+        </ul>
     </nav>
-</header>
-
+  </header>
 
   <!-- Add this right after the header -->
   <div id="mobileNav" class="mobile-nav">
@@ -563,13 +646,31 @@
     <div class="mobile-nav-content">
       <a href="index.html">Home</a>
       <a href="benefits.html">About</a>
-      <a href="appetizers.html">Appetizers</a>
-      <a href="mains.html">Main/Entrees</a>
-      <a href="desserts.html">Desserts</a>
-      <a href="outreach.html">Community Outreach</a>
-      <a href="reserve.html">Reserve</a>
-      <a href="contact.html">Contact</a>
-            </div>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Menu <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="appetizers.html">Appetizers</a>
+          <a href="mains.html">Main/Entrees</a>
+          <a href="desserts.html">Desserts</a>
+        </div>
+      </div>
+      <a href="community.html">Community</a>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Reserve <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="reserve.html">Dine In</a>
+          <a href="CarryOut.html">Order To-Go</a>
+        </div>
+      </div>
+      <div class="mobile-menu-dropdown">
+        <a href="#" onclick="toggleDropdown(this)">Contact/Copyright <i class="fa fa-angle-down"></i></a>
+        <div class="mobile-dropdown-content">
+          <a href="contact.html">Contact</a>
+          <a href="copyright.html">Copyright</a>
+        </div>
+      </div>
+    </div>
+  </div>
         </div>
 
   <!--Image Header-->
@@ -801,8 +902,8 @@
           <div class="footer_panel content_space">
             <h4 class="heading_border heading_space">Contact Verdura</h4>
             <ul class="about_foot">
-              <li><i class="fa fa-home"></i>10891 Cory Lake Drive,<br> Tampa, FL 33647, United States</li>
-              <li><i class="fa fa-phone"></i>(205)-492-0466</li>
+              <li><i class="fa fa-home"></i>404 Kale Way, Suite 12B,<br> Tampa, FL 33647, United States</li>
+              <li><i class="fa fa-phone"></i>(123) 000-VEGN/li>
               <li><i class="fa fa-envelope-o"></i>verdura.info@gmail.com</li>
             </ul>
           </div>
@@ -1374,6 +1475,31 @@ closeBtn.addEventListener('click', function() {
 window.addEventListener('click', function(event) {
   if (event.target == modal) {
     modal.style.display = 'none';
+  }
+});
+
+// Mobile navigation functions
+function openNav() {
+  document.getElementById("mobileNav").style.width = "100%";
+  document.body.style.overflow = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("mobileNav").style.width = "0%";
+  document.body.style.overflow = "auto";
+}
+
+function toggleDropdown(element) {
+  const dropdown = element.parentElement;
+  dropdown.classList.toggle("active");
+}
+
+// Close menu on window resize
+window.addEventListener('resize', function() {
+  if (window.innerWidth > 800) {
+    const nav = document.getElementById("mobileNav");
+    nav.style.width = "0";
+    document.body.classList.remove("nav-open");
   }
 });
 </script>

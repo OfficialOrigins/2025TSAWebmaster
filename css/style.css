@@ -2550,6 +2550,13 @@ footer .copyright {
 
 .howtoapply_header{
 	color:#fff;
+	background:url(../images/AdobeStock_87307623.jpeg);
+	background-size:cover;
+	background-position:center center;
+}
+
+.about_header{
+	color:#fff;
 	background:url(../images/dylan-de-jonge-9SjCXUq_qSE-unsplash.jpg);
 	background-size:cover;
 	background-position:center center;
